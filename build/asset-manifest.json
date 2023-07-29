@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87ae28a2.css",
+    "main.js": "/static/js/main.abe32b9e.js",
+    "static/js/787.609bcf66.chunk.js": "/static/js/787.609bcf66.chunk.js",
+    "static/media/main-sectionBG.svg": "/static/media/main-sectionBG.76f48b05df8d8123bc4d710807c54854.svg",
+    "static/media/others_background.svg": "/static/media/others_background.5e721cb1593e094560f6.svg",
+    "static/media/about_image.svg": "/static/media/about_image.1e752210bba643d44ed142b99cb7897f.svg",
+    "static/media/services_safe_icon.svg": "/static/media/services_safe_icon.6be52101797459980ca1a110a7c9ff70.svg",
+    "static/media/services_mining_icon.svg": "/static/media/services_mining_icon.2f3f8447bf3c31fc97f1ef33d2a93e08.svg",
+    "static/media/services_btcwallet_icon.svg": "/static/media/services_btcwallet_icon.8e14108ac0267d980055f28c13d86146.svg",
+    "index.html": "/index.html",
+    "static/media/services-bg_path.svg": "/static/media/services-bg_path.821d0c09d2e29b967765.svg",
+    "main.87ae28a2.css.map": "/static/css/main.87ae28a2.css.map",
+    "main.abe32b9e.js.map": "/static/js/main.abe32b9e.js.map",
+    "787.609bcf66.chunk.js.map": "/static/js/787.609bcf66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87ae28a2.css",
+    "static/js/main.abe32b9e.js"
+  ]
+}
