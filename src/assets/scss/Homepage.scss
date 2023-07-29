@@ -67,20 +67,21 @@
             .container {
                 position: absolute;
                 bottom: 20%;
+                left: 0;
                 width: 100%;
             }
             &-head{
                 color: #FFF;
-                font-size: 70px;
-                font-weight: 700;
+                font-size: 60px;
                 line-height: 90px;
+                font-weight: 500;
                 text-transform: capitalize;
                 margin-bottom: 1rem;
+                text-align: left;
                 #swap {
                     color: #BAFD02;
-                    font-size: 70px;
+                    font-size: 50px;
                     font-style: normal;
-                    font-weight: 300;
                     line-height: 90px;
                 }
             }
@@ -130,7 +131,7 @@
             .card{
                 border-radius: 20px;
                 background: #1A1C1D;
-                width: 355.333px;
+                width: 100%;
                 height: 385px;
                 padding: 1rem;
                 margin-bottom: 0.75rem;
@@ -168,6 +169,23 @@
             background-size: cover;
             width: 100%;
             height: 100%;
+            padding-bottom: 4rem;
+
+            .wrap {
+                position: relative;
+            }
+
+            &-image::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                bottom: 30%;
+                border-radius: 798px;
+                opacity: 0.1898927241563797;
+                background: radial-gradient(48.49% 48.49% at 48.68% 48.58%, rgba(210, 210, 210, 0.86) 0%, rgba(216, 216, 216, 0.01) 100%);
+            }
     
             img{
                 width: 100%;
@@ -383,6 +401,7 @@
             background-size: cover;
             width: 100%;
             height: 100vh;
+            padding-bottom: 4rem;
         
     
             .wrap {
@@ -611,6 +630,7 @@
             background-size: cover;
             width: 100%;
             height: 100vh;
+            padding-bottom: 4rem;
         
     
             .wrap {
@@ -838,6 +858,7 @@
             background-size: cover;
             width: 100%;
             height: 100vh;
+            padding-bottom: 4rem;
         
     
             .wrap {
