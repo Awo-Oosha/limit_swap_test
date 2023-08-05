@@ -234,11 +234,11 @@
   display: flex;
   flex-flow: row wrap;
 }
-.MainApp .chart-activities .inner-card .activities-nav .activities-1 div {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 span {
   opacity: 0.3;
   cursor: pointer;
 }
-.MainApp .chart-activities .inner-card .activities-nav .activities-1 div.active {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 span.active {
   opacity: 1;
   font-weight: 600;
 }
