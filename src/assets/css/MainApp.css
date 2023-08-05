@@ -239,6 +239,7 @@ body {
   flex-flow: row column;
   justify-content: flex-start;
   align-items: center;
+  border: #F73D44 solid 2px;
 }
 .mainapp .chart-activities .inner-card .activities-nav .activities-1 div {
   margin-right: 0.5rem;
