@@ -282,7 +282,7 @@ body {
                         display: flex;
                         flex-flow: row column;
                         justify-content: flex-start;
-                        flex: 50%;
+                        
                         
                         div {
                             margin-right: .75rem;
@@ -297,7 +297,6 @@ body {
                     }
 
                     .activities-2 {
-                        flex: 50%;
                         margin: auto;
                         display: flex;
                         justify-content: flex-end;
