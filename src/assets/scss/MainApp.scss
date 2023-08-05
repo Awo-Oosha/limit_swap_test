@@ -253,11 +253,11 @@
         //  *********CHART ACTIVITIES********//
 
         &-activities {
-            width: 369px;
+            width: 386px;
             height: 566px;
             padding: 0.5rem;
             border-radius: 20px;
-            background: linear-gradient( rgba(186, 253, 2, 1), rgba(26, 33, 6, 1), rgba(186, 253, 2, 1));
+            background: linear-gradient( rgb(253, 2, 2), rgba(26, 33, 6, 1), rgba(186, 253, 2, 1));
 
             .inner-card {
                 background: #1A1C1E;
@@ -276,8 +276,9 @@
                     .activities-1 {
                         display: flex;
                         flex-flow: row wrap;
-                        span {
-                            // margin-right: .75rem;
+                        justify-content: space-between;
+                        div {
+                            margin-right: .75rem;
                             opacity: 0.3;
                             cursor: pointer;
 
@@ -291,7 +292,9 @@
                     .activities-2 {
                         margin: auto;
                         display: flex;
+                        justify-content: space-between;
                         justify-content: flex-end;
+                        flex: 40%;
                         
                         img {
                             margin-left: 0.5rem;

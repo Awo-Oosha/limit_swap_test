@@ -210,11 +210,11 @@
   padding-top: 0.5rem;
 }
 .MainApp .chart-activities {
-  width: 369px;
+  width: 386px;
   height: 566px;
   padding: 0.5rem;
   border-radius: 20px;
-  background: linear-gradient(rgb(186, 253, 2), rgb(26, 33, 6), rgb(186, 253, 2));
+  background: linear-gradient(rgb(253, 2, 2), rgb(26, 33, 6), rgb(186, 253, 2));
 }
 .MainApp .chart-activities .inner-card {
   background: #1A1C1E;
@@ -233,19 +233,23 @@
 .MainApp .chart-activities .inner-card .activities-nav .activities-1 {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
-.MainApp .chart-activities .inner-card .activities-nav .activities-1 span {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 div {
+  margin-right: 0.75rem;
   opacity: 0.3;
   cursor: pointer;
 }
-.MainApp .chart-activities .inner-card .activities-nav .activities-1 span.active {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 div.active {
   opacity: 1;
   font-weight: 600;
 }
 .MainApp .chart-activities .inner-card .activities-nav .activities-2 {
   margin: auto;
   display: flex;
+  justify-content: space-between;
   justify-content: flex-end;
+  flex: 40%;
 }
 .MainApp .chart-activities .inner-card .activities-nav .activities-2 img {
   margin-left: 0.5rem;

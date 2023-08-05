@@ -203,21 +203,21 @@ export default function MainApp() {
 
                     <nav className='activities-nav'>
                     <div className='activities-1 d-flex'>
-                        <span className={activeButton === 'Swap' ? 'active' : ''} onClick={handleOnClick}>
+                        <div className={activeButton === 'Swap' ? 'active' : ''} onClick={handleOnClick}>
                           Swap
-                        </span>
-                        <span
+                        </div>
+                        <div
                           className={activeButton === 'Limit' ? 'active' : ''}
                           onClick={handleOnClick}
                         >
                           Limit
-                        </span>
-                        <span
+                        </div>
+                        <div
                           className={activeButton === 'DCA' ? 'active' : ''}
                           onClick={handleOnClick}
                         >
                           DCA
-                        </span>
+                        </div>
                     </div>
                     <div className='activities-2'>
                         <img src={activitiesIcons[0]} alt='swap_route.svg' onClick={handleOpenModal}></img>
