@@ -276,11 +276,10 @@
                     .activities-1 {
                         display: flex;
                         flex-flow: row wrap;
-                        justify-content: flex-start;
                         flex: 50%;
                         
                         div {
-                            margin-right: .75rem;
+                            // margin-right: .75rem;
                             opacity: 0.3;
                             cursor: pointer;
 
