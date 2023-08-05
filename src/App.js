@@ -1,7 +1,6 @@
 import './App.css';
 import Homepage from './components/Homepage';
 import MainApp from './components/MainApp';
-import Footer from './components/Footer';
 import { Routes, Route  } from 'react-router-dom';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
         <Route path='/app' element={<MainApp />} />
       </Routes>
       
-      <Footer />
     </div>
   );
 }
