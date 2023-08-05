@@ -221,7 +221,7 @@ export default function MainApp() {
                         DCA
                       </div>
                   </div>
-                    <div className='activities-2'>
+                  <div className='activities-2'>
                       <img src={activitiesIcons[0]} alt='swap_route.svg' onClick={handleOpenModal}></img>
                         {/* ******SWAP ROUTE MODAL */}
                       <CustomModal isOpen={isModalOpen} onClose={handleCloseModal}>
@@ -347,7 +347,7 @@ export default function MainApp() {
                       <img src={activitiesIcons[1]} alt='swap'></img>
                       <img src={activitiesIcons[2]} alt='swap'></img>
                       <img src={activitiesIcons[3]} alt='swap'></img>
-                    </div>
+                  </div>
                   </nav>
                       {/* *********SWAP******** */}
                     {activeButton === 'Swap' && (

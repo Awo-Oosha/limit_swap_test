@@ -275,17 +275,18 @@ body {
                 .activities-nav {
                     display: flex;
                     flex-flow: row column;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     margin-bottom: 0.5rem;
 
                     .activities-1 {
                         display: flex;
                         flex-flow: row column;
                         justify-content: flex-start;
+                        align-items: center;
                         
                         
                         div {
-                            margin-right: .75rem;
+                            margin-right: .50rem;
                             opacity: 0.3;
                             cursor: pointer;
 
