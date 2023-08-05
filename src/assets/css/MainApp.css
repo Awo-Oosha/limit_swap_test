@@ -232,7 +232,7 @@
 }
 .MainApp .chart-activities .inner-card .activities-nav .activities-1 {
   display: flex;
-  flex-flow: row column;
+  flex-flow: row wrap;
   justify-content: flex-start;
   flex: 50%;
 }
