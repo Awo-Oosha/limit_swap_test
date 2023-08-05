@@ -44,5 +44,4 @@ const CustomModal = ({ isOpen, onClose, children }) => {
     </Modal>
   );
 };
-
 export default CustomModal;

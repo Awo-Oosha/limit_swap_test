@@ -1,10 +1,3 @@
-body {
-  background: url(../img/app_background.svg) no-repeat center;
-  background-color: #000;
-  height: 100%;
-  background-size: cover;
-}
-
 .app-nav {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
@@ -109,48 +102,51 @@ body {
   margin-right: 0.5rem;
 }
 
-.mainapp {
-  margin-top: 1rem;
+.MainApp {
+  background: url(../img/app_background.svg) no-repeat center;
+  background-color: #000;
+  height: 100%;
+  background-size: cover;
 }
-.mainapp .col-lg-8 {
+.MainApp .col-lg-8 {
   display: none;
 }
-.mainapp .col-lg-8.active {
+.MainApp .col-lg-8.active {
   display: block;
 }
-.mainapp .chart {
+.MainApp .chart {
   height: 566px;
   background-color: #1A1C1E;
   padding: 1rem;
   transition: all 0.5s ease;
   transform: translateX(0);
 }
-.mainapp .chart.active {
+.MainApp .chart.active {
   transform: translateX(100%);
   transition: all 0.5s ease;
   opacity: 0;
 }
-.mainapp .chart-heading {
+.MainApp .chart-heading {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   border-bottom: 1px solid #34363E;
   padding-bottom: 1rem;
 }
-.mainapp .chart-heading .pair_price {
+.MainApp .chart-heading .pair_price {
   display: flex;
   flex-flow: column wrap;
 }
-.mainapp .chart-heading .pair_price .pair {
+.MainApp .chart-heading .pair_price .pair {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.mainapp .chart-heading .pair_price .pair form {
+.MainApp .chart-heading .pair_price .pair form {
   margin-left: 0.5rem;
 }
-.mainapp .chart-heading .pair_price .pair form select {
+.MainApp .chart-heading .pair_price .pair form select {
   border: none;
   background: transparent;
   color: #fff;
@@ -158,23 +154,23 @@ body {
   font-weight: 700;
   padding: 0.75rem 0.5rem;
 }
-.mainapp .chart-heading .pair_price .pair form select:focus {
+.MainApp .chart-heading .pair_price .pair form select:focus {
   border: none;
 }
-.mainapp .chart-heading .pair_price .price {
+.MainApp .chart-heading .pair_price .price {
   color: #FFF;
   font-size: 26px;
   font-weight: 600;
   text-transform: uppercase;
 }
-.mainapp .chart-heading .pair_price .price sub {
+.MainApp .chart-heading .pair_price .price sub {
   color: #F73D44;
   font-size: 14px;
 }
-.mainapp .chart-heading .chart-buttons-container {
+.MainApp .chart-heading .chart-buttons-container {
   display: flex;
 }
-.mainapp .chart-heading .chart-buttons-container .buttons {
+.MainApp .chart-heading .chart-buttons-container .buttons {
   background: #34363E;
   border-radius: 10px;
   display: flex;
@@ -183,7 +179,7 @@ body {
   padding: 0;
   height: 30px;
 }
-.mainapp .chart-heading .chart-buttons-container .buttons button {
+.MainApp .chart-heading .chart-buttons-container .buttons button {
   border: none;
   background: #34363E;
   color: rgba(255, 255, 255, 0.4);
@@ -194,12 +190,12 @@ body {
   border-radius: 8px;
   padding: 0.4rem 1rem;
 }
-.mainapp .chart-heading .chart-buttons-container .buttons button.active {
+.MainApp .chart-heading .chart-buttons-container .buttons button.active {
   background-color: #B6F509;
   color: #17234C;
   font-weight: 700;
 }
-.mainapp .chart-heading .chart-buttons-container .expand-btn {
+.MainApp .chart-heading .chart-buttons-container .expand-btn {
   margin-left: 1rem;
   background-color: #34363E;
   padding: 1rem;
@@ -210,17 +206,17 @@ body {
   cursor: pointer;
   color: #FFF;
 }
-.mainapp .chart-body {
+.MainApp .chart-body {
   padding-top: 0.5rem;
 }
-.mainapp .chart-activities {
+.MainApp .chart-activities {
   width: 369px;
   height: 566px;
   padding: 0.5rem;
   border-radius: 20px;
   background: linear-gradient(rgb(186, 253, 2), rgb(26, 33, 6), rgb(186, 253, 2));
 }
-.mainapp .chart-activities .inner-card {
+.MainApp .chart-activities .inner-card {
   background: #1A1C1E;
   height: 100%;
   border-radius: 15px;
@@ -228,60 +224,60 @@ body {
   font-family: "poppins", sans-serif;
   color: #FFF;
 }
-.mainapp .chart-activities .inner-card .activities-nav {
+.MainApp .chart-activities .inner-card .activities-nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .activities-nav .activities-1 {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 {
   display: flex;
   flex-flow: row column;
   justify-content: flex-start;
   flex: 50%;
 }
-.mainapp .chart-activities .inner-card .activities-nav .activities-1 div {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 div {
   margin-right: 0.75rem;
   opacity: 0.3;
   cursor: pointer;
 }
-.mainapp .chart-activities .inner-card .activities-nav .activities-1 div.active {
+.MainApp .chart-activities .inner-card .activities-nav .activities-1 div.active {
   opacity: 1;
   font-weight: 600;
 }
-.mainapp .chart-activities .inner-card .activities-nav .activities-2 {
+.MainApp .chart-activities .inner-card .activities-nav .activities-2 {
   flex: 50%;
   margin: auto;
   display: flex;
   justify-content: flex-end;
 }
-.mainapp .chart-activities .inner-card .activities-nav .activities-2 img {
+.MainApp .chart-activities .inner-card .activities-nav .activities-2 img {
   margin-left: 0.5rem;
   cursor: pointer;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card {
+.MainApp .chart-activities .inner-card .swap .first_pair .card {
   height: 144px;
   background: #34363E;
   padding: 0.5rem;
   position: relative;
   margin-bottom: 0.3rem;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option {
   display: flex;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_icon {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_icon {
   width: 100%;
   height: 100%;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select {
   margin-left: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select select {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select select {
   color: #FFF;
   background: transparent;
   border: none;
@@ -289,41 +285,41 @@ body {
   font-weight: 700;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select .pair_name {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .pair_option .pair_select .pair_name {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 400;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .balance {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .balance {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 300;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_info .balance #balance {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_info .balance #balance {
   color: #FFF;
   font-size: 12px;
   font-weight: 400;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .coin_price {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .coin_price {
   margin: 0;
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .coin_price sub {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .coin_price sub {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 400;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_buttons {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0.3rem;
 }
-.mainapp .chart-activities .inner-card .swap .first_pair .card .pair_buttons .pair-btn {
+.MainApp .chart-activities .inner-card .swap .first_pair .card .pair_buttons .pair-btn {
   border: none;
   background: #494A52;
   color: #8C8C8D;
@@ -331,38 +327,38 @@ body {
   width: 66px;
   height: 27px;
 }
-.mainapp .chart-activities .inner-card .swap .arrow {
+.MainApp .chart-activities .inner-card .swap .arrow {
   position: absolute;
   left: 47%;
   bottom: 63.5%;
   width: 15px;
   z-index: 1;
 }
-.mainapp .chart-activities .inner-card .swap .arrow img {
+.MainApp .chart-activities .inner-card .swap .arrow img {
   height: 22px;
   width: 22px;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card {
+.MainApp .chart-activities .inner-card .swap .second_pair .card {
   height: 108px;
   background: #34363E;
   padding: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option {
   display: flex;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_icon {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_icon {
   width: 100%;
   height: 100%;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select {
   margin-left: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select select {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select select {
   color: #FFF;
   background: transparent;
   border: none;
@@ -370,37 +366,37 @@ body {
   font-weight: 700;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select .pair_name {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .pair_option .pair_select .pair_name {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 400;
   min-width: 100px;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .balance {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .balance {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 300;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .pair_info .balance #balance {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .pair_info .balance #balance {
   color: #FFF;
   font-size: 12px;
   font-weight: 400;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .coin_price {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .coin_price {
   margin: 0;
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
 }
-.mainapp .chart-activities .inner-card .swap .second_pair .card .coin_price sub {
+.MainApp .chart-activities .inner-card .swap .second_pair .card .coin_price sub {
   color: #8C8C8D;
   font-size: 12px;
   font-weight: 400;
 }
-.mainapp .chart-activities .inner-card .swap .eth_to_dai_convert_amount {
+.MainApp .chart-activities .inner-card .swap .eth_to_dai_convert_amount {
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -409,16 +405,16 @@ body {
   font-weight: 700;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .eth_to_dai_convert_amount #one_eth {
+.MainApp .chart-activities .inner-card .swap .eth_to_dai_convert_amount #one_eth {
   font-weight: 500;
 }
-.mainapp .chart-activities .inner-card .swap .eth_to_dai_convert_amount #dai_amount {
+.MainApp .chart-activities .inner-card .swap .eth_to_dai_convert_amount #dai_amount {
   font-weight: 400;
 }
-.mainapp .chart-activities .inner-card .swap .swap-connect-btn {
+.MainApp .chart-activities .inner-card .swap .swap-connect-btn {
   width: 100%;
 }
-.mainapp .chart-activities .inner-card .swap .swap-connect-btn .connect {
+.MainApp .chart-activities .inner-card .swap .swap-connect-btn .connect {
   background: #B6F509;
   color: #000;
   width: 100%;
@@ -430,35 +426,35 @@ body {
   height: 50px;
   border-radius: 8px;
 }
-.mainapp .chart-activities .inner-card .swap .others {
+.MainApp .chart-activities .inner-card .swap .others {
   margin-top: 0.75rem;
   display: flex;
   justify-content: space-between;
 }
-.mainapp .chart-activities .inner-card .swap .others .card {
+.MainApp .chart-activities .inner-card .swap .others .card {
   width: 101px;
   height: 76px;
   padding: 0.5rem;
   background: #34363E;
 }
-.mainapp .chart-activities .inner-card .swap .others .card div {
+.MainApp .chart-activities .inner-card .swap .others .card div {
   color: #FFF;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .others .card div #dai-fee {
+.MainApp .chart-activities .inner-card .swap .others .card div #dai-fee {
   font-weight: 300;
 }
-.mainapp .chart-activities .inner-card .swap .others .card p {
+.MainApp .chart-activities .inner-card .swap .others .card p {
   color: #8C8C8D;
   text-align: center;
   font-size: 11px;
   font-weight: 400;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .swap .eth2usdt {
+.MainApp .chart-activities .inner-card .swap .eth2usdt {
   width: 100%;
   background: #34363E;
   border-radius: 8px;
@@ -472,22 +468,22 @@ body {
   align-items: center;
   padding: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .swap .eth2usdt #amount {
+.MainApp .chart-activities .inner-card .swap .eth2usdt #amount {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   color: #8C8C8D;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card {
   background: #34363E;
   margin-top: 0.5rem;
   padding: 0.5rem;
   border-radius: 8px;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head {
   display: flex;
   justify-content: space-between;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Sell {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Sell {
   color: #8C8C8D;
   font-family: Poppins;
   font-size: 12px;
@@ -496,7 +492,7 @@ body {
   line-height: normal;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Set {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Set {
   color: #B6F509;
   text-align: right;
   font-family: Poppins;
@@ -506,10 +502,10 @@ body {
   line-height: normal;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Set ion-icon {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card .set-at-rate-head .Set ion-icon {
   color: #494A52;
 }
-.mainapp .chart-activities .inner-card .limit .set-at-rate .card .rate {
+.MainApp .chart-activities .inner-card .limit .set-at-rate .card .rate {
   color: #FFF;
   font-family: Poppins;
   font-size: 24px;
@@ -518,7 +514,7 @@ body {
   line-height: normal;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .limit .expiration .card {
+.MainApp .chart-activities .inner-card .limit .expiration .card {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -527,7 +523,7 @@ body {
   padding: 0.3rem;
   margin-top: 0.5rem;
 }
-.mainapp .chart-activities .inner-card .limit .expiration .card #expires {
+.MainApp .chart-activities .inner-card .limit .expiration .card #expires {
   color: #8C8C8D;
   font-family: Poppins;
   font-size: 12px;
@@ -536,7 +532,7 @@ body {
   line-height: normal;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .limit .expiration .card #time {
+.MainApp .chart-activities .inner-card .limit .expiration .card #time {
   display: flex;
   align-items: center;
   color: #FFF;
@@ -548,7 +544,7 @@ body {
   line-height: normal;
   text-transform: capitalize;
 }
-.mainapp .chart-activities .inner-card .limit .call-to-action {
+.MainApp .chart-activities .inner-card .limit .call-to-action {
   border-radius: 8px;
   background: #B6F509;
   width: 100%;
@@ -564,19 +560,19 @@ body {
   font-weight: 700;
   line-height: normal;
 }
-.mainapp .chart-activities .inner-card .limit .convert-tokens {
+.MainApp .chart-activities .inner-card .limit .convert-tokens {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 0.3rem;
 }
-.mainapp .chart-activities .inner-card .limit .convert-tokens .token1, .mainapp .chart-activities .inner-card .limit .convert-tokens .token2 {
+.MainApp .chart-activities .inner-card .limit .convert-tokens .token1, .MainApp .chart-activities .inner-card .limit .convert-tokens .token2 {
   width: 154.5px;
   height: 70px;
   border-radius: 8px;
   background: #34363E;
 }
-.mainapp .chart-activities .inner-card .limit .convert-tokens .token1 .token_price, .mainapp .chart-activities .inner-card .limit .convert-tokens .token2 .token_price {
+.MainApp .chart-activities .inner-card .limit .convert-tokens .token1 .token_price, .MainApp .chart-activities .inner-card .limit .convert-tokens .token2 .token_price {
   color: #FFF;
   font-family: Poppins;
   font-size: 12px;
@@ -586,7 +582,7 @@ body {
   text-transform: capitalize;
   text-align: center;
 }
-.mainapp .chart-activities .inner-card .limit .convert-tokens .token1 .token_name, .mainapp .chart-activities .inner-card .limit .convert-tokens .token1 .currency, .mainapp .chart-activities .inner-card .limit .convert-tokens .token2 .token_name, .mainapp .chart-activities .inner-card .limit .convert-tokens .token2 .currency {
+.MainApp .chart-activities .inner-card .limit .convert-tokens .token1 .token_name, .MainApp .chart-activities .inner-card .limit .convert-tokens .token1 .currency, .MainApp .chart-activities .inner-card .limit .convert-tokens .token2 .token_name, .MainApp .chart-activities .inner-card .limit .convert-tokens .token2 .currency {
   color: #8C8C8D;
   font-family: Poppins;
   font-size: 12px;
@@ -596,12 +592,12 @@ body {
   text-transform: capitalize;
   text-align: center;
 }
-.mainapp .chart-activities .inner-card .DCA .expiration .card {
+.MainApp .chart-activities .inner-card .DCA .expiration .card {
   margin-top: 1rem;
   justify-content: flex-start;
   padding: 1rem;
 }
-.mainapp .chart-activities .inner-card .DCA .fee_charges {
+.MainApp .chart-activities .inner-card .DCA .fee_charges {
   color: #8C8C8D;
   font-family: Poppins;
   font-size: 12px;
@@ -612,14 +608,18 @@ body {
   text-align: center;
   padding: 2rem;
 }
-.mainapp .chart_transactions {
+.MainApp .history {
+  background-color: #000;
+  height: 100%;
+}
+.MainApp .chart_transactions {
   margin-top: 1.5rem;
   width: 100%;
   height: 230px;
   background: #1A1C1E;
   border-radius: 10px;
 }
-.mainapp .chart_transactions-heading {
+.MainApp .chart_transactions-heading {
   display: flex;
   align-items: center;
   height: 40px;
@@ -630,7 +630,7 @@ body {
   padding: 0 1.5rem;
   position: relative;
 }
-.mainapp .chart_transactions-heading .active_orders, .mainapp .chart_transactions-heading .order_history {
+.MainApp .chart_transactions-heading .active_orders, .MainApp .chart_transactions-heading .order_history {
   margin-right: 1.5rem;
   padding: 0.5rem 0;
   cursor: pointer;
@@ -640,7 +640,7 @@ body {
   font-weight: 400;
   text-transform: capitalize;
 }
-.mainapp .chart_transactions-heading .active_orders::after, .mainapp .chart_transactions-heading .order_history::after {
+.MainApp .chart_transactions-heading .active_orders::after, .MainApp .chart_transactions-heading .order_history::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -653,7 +653,7 @@ body {
   border-top-right-radius: 8px;
   transition: width 0.3s ease;
 }
-.mainapp .chart_transactions-heading .active_orders.active, .mainapp .chart_transactions-heading .order_history.active {
+.MainApp .chart_transactions-heading .active_orders.active, .MainApp .chart_transactions-heading .order_history.active {
   color: #FFF;
   font-family: Raleway;
   font-size: 14px;
@@ -661,11 +661,11 @@ body {
   text-transform: capitalize;
   position: relative;
 }
-.mainapp .chart_transactions-heading .active_orders.active::after, .mainapp .chart_transactions-heading .order_history.active::after {
+.MainApp .chart_transactions-heading .active_orders.active::after, .MainApp .chart_transactions-heading .order_history.active::after {
   width: 30px;
   transform: scaleY(100%);
 }
-.mainapp .chart_transactions-heading .close-btn {
+.MainApp .chart_transactions-heading .close-btn {
   position: absolute;
   text-align: right;
   right: 15px;
@@ -674,10 +674,10 @@ body {
   font-size: 1.5rem;
   transition: all 0.5s ease;
 }
-.mainapp .chart_transactions-heading .close-btn.active {
+.MainApp .chart_transactions-heading .close-btn.active {
   transform: rotate(180deg);
 }
-.mainapp .chart_transactions-body {
+.MainApp .chart_transactions-body {
   margin-top: 1rem;
   padding: 1rem;
   color: #8C8C8D;
@@ -687,17 +687,17 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.mainapp .chart_transactions-body h6 {
+.MainApp .chart_transactions-body h6 {
   border-bottom: 1.3rem;
 }
-.mainapp .chart_transactions-body .activities_list p {
+.MainApp .chart_transactions-body .activities_list p {
   color: #FFF;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 300;
   text-transform: capitalize;
 }
-.mainapp .chart_transactions-body .col-3 .row .col-12 {
+.MainApp .chart_transactions-body .col-3 .row .col-12 {
   color: #F1A03B;
   font-family: Poppins;
   font-size: 14px;
