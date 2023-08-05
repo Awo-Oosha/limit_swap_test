@@ -202,11 +202,8 @@ export default function MainApp() {
                     {/* ****ACTIVITIES NAV******* */}
 
                     <nav className='activities-nav'>
-                    <div className='activities-1'>
-                        <div
-                          className={activeButton === 'Swap' ? 'active' : ''}
-                          onClick={handleOnClick}
-                        >
+                    <div className='activities-1 d-flex'>
+                        <div className={activeButton === 'Swap' ? 'active' : ''} onClick={handleOnClick}>
                           Swap
                         </div>
                         <div
