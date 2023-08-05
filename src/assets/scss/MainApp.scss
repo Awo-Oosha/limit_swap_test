@@ -274,20 +274,18 @@ body {
 
                 .activities-nav {
                     display: flex;
-                    flex-flow: row column;
-                    justify-content: space-evenly;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
                     margin-bottom: 0.5rem;
 
                     .activities-1 {
                         display: flex;
                         flex-flow: row column;
                         justify-content: flex-start;
-                        align-items: center;
-                        border: #F73D44 solid 2px;
-                        
+                        flex: 50%;
                         
                         div {
-                            margin-right: .50rem;
+                            margin-right: .75rem;
                             opacity: 0.3;
                             cursor: pointer;
 
@@ -299,6 +297,7 @@ body {
                     }
 
                     .activities-2 {
+                        flex: 50%;
                         margin: auto;
                         display: flex;
                         justify-content: flex-end;
