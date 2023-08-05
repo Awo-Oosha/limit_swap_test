@@ -1,0 +1,1087 @@
+body {
+    background: url(../img/app_background.svg) no-repeat center;
+    background-color: #000;
+    height: 100%;
+    background-size: cover;
+}
+
+.app-nav {
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 1rem;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    
+    .mynav-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex: 70%;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 2rem;
+        
+    }
+
+    .actionButtons {
+        display: flex;
+        flex-flow: row wrap;
+        .chart_toggle {
+            .toggle-name {
+                color: #FFF;
+                font-family: Raleway;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-right: 1rem;
+            }
+
+            .toggle {
+                width: 45px;
+                height: 17px;
+                background: rgba(52, 54, 62, 1);
+                border-radius: 20px;
+                position: relative;
+                cursor: pointer;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: url('../img/app/toggle_off.svg') no-repeat center;
+                    width: 35px;
+                    height: 35px;
+                    background-size: cover;
+                    top: -4px;
+                    left: -5px;
+                    transition: all 0.5s ease;
+                }
+                &.active {
+                    &::after {
+                        content: "";
+                        background: url('../img/app/toggle_on.svg') no-repeat center;
+                        top: -6px;
+                        left: 17px;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+
+        .token-select {
+            .select {
+                border-radius: 8px;
+                border: 1px solid #BAFD02;
+                color: #BAFD02;
+                text-align: center;
+                font-family: Helvetica;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                background-color: #000;
+            }
+            #token-select {
+                padding: .3rem 0;
+                border: none;
+                color: #BAFD02;
+                text-align: center;
+                font-family: Helvetica;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                background-color: #000;
+
+            }
+        }
+
+        .connectBTN {
+            width: 169px;
+            height: 36px;
+            color: #000;
+            text-align: center;
+            font-family: Helvetica;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border: none;
+            background-color: #B6F509;
+            border-radius: 8px;
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.mainapp {
+    margin-top: 1rem;
+
+    .col-lg-8 {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+    
+    .chart {
+        height: 566px;
+        background-color: #1A1C1E;
+        padding: 1rem;
+
+        transition: all 0.5s ease;
+        transform: translateX(0);
+        &.active {
+            transform: translateX(100%);
+            transition: all 0.5s ease;
+            opacity: 0;
+            // display: none;
+        }
+
+        // *******CHART HEADING********* //
+
+        &-heading {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            border-bottom: 1px solid #34363E;
+            padding-bottom: 1rem;
+            .pair_price {
+                display: flex;
+                flex-flow: column wrap;
+                
+                .pair {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    form {
+                        margin-left: 0.5rem;
+                        select {
+                            border: none;
+                            background: transparent;
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 700;
+                            padding: .75rem .50rem;
+
+                            &:focus {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                .price {
+                    color: #FFF;
+                    font-size: 26px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    sub {
+                        color: #F73D44;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .chart-buttons-container {
+                display: flex;
+
+                .buttons {
+                    background: #34363E;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    height: 30px;
+
+                    button {
+                        border: none;
+                        background: #34363E;
+                        color: rgba(255, 255, 255, 0.40);
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        border-radius: 8px;
+                        padding: 0.4rem 1rem;
+                        
+    
+                        &.active {
+                            background-color: #B6F509;
+                            color: #17234C;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .expand-btn {
+                    margin-left: 1rem;
+                    background-color: #34363E;
+                    padding: 1rem;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    color: #FFF;
+                }
+            }
+
+            
+
+        }
+        // *******CHART HEADING Ends********* //
+
+
+        // ********CHART BODY*********** //
+
+        &-body {
+            padding-top: 0.5rem;
+        }
+
+        // ********CHART BODY Ends*********** //
+
+
+        //  *********CHART ACTIVITIES********//
+
+        &-activities {
+            width: 369px;
+            height: 566px;
+            padding: 0.5rem;
+            border-radius: 20px;
+            background: linear-gradient( rgba(186, 253, 2, 1), rgba(26, 33, 6, 1), rgba(186, 253, 2, 1));
+
+            .inner-card {
+                background: #1A1C1E;
+                height: 100%;
+                border-radius: 15px;
+                padding: 0.5rem;
+                font-family: 'poppins', sans-serif;
+                color: #FFF;
+
+                .activities-nav {
+                    display: flex;
+                    flex-flow: row column;
+                    justify-content: space-between;
+                    margin-bottom: 0.5rem;
+
+                    .activities-1 {
+                        display: flex;
+                        flex-flow: row column;
+                        justify-content: flex-start;
+                        flex: 50%;
+                        
+                        div {
+                            margin-right: .75rem;
+                            opacity: 0.3;
+                            cursor: pointer;
+
+                            &.active {
+                                opacity: 1;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    .activities-2 {
+                        flex: 50%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: flex-end;
+                        
+                        img {
+                            margin-left: 0.5rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                // *******SWAP******* //
+                .swap{
+                    .first_pair .card {
+                        height: 144px;
+                        background: #34363E;
+                        padding: 0.5rem;
+                        position: relative;
+                        margin-bottom: 0.3rem;
+
+                        .pair_info {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .pair_option {
+                                display: flex;
+
+                                .pair_icon {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                .pair_select {
+                                    margin-left: 0.5rem;
+                                    
+                                    select {
+                                        color: #FFF;
+                                        background: transparent;
+                                        border: none;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        text-transform: capitalize;
+                                    }
+                                    .pair_name {
+                                        color: #8C8C8D;
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
+
+                            .balance {
+                                color: #8C8C8D;
+                                font-size: 12px;
+                                font-weight: 300;
+                                text-transform: capitalize;
+
+                                #balance {
+                                    color: #FFF;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+
+                        .coin_price {
+                            margin: 0;
+                            color: #FFF;
+                            font-size: 24px;
+                            font-weight: 500;
+                            
+                            sub {
+                                color: #8C8C8D;
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .pair_buttons {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 0.3rem;
+                            .pair-btn {
+                                border: none;
+                                background: #494A52;
+                                color: #8C8C8D;
+                                border-radius: 5px;
+                                width: 66px;
+                                height: 27px;
+                            }
+                        }
+                    }
+                    
+                    .arrow {
+                        position: absolute;
+                        left: 47%;
+                        bottom: 63.5%;
+                        width: 15px;
+                        z-index: 1;
+                        
+                        img {
+                            height: 22px;
+                            width: 22px;
+                        }
+                    }
+
+                    .second_pair .card {
+                        height: 108px;
+                        background: #34363E;
+                        padding: 0.5rem;
+
+                        .pair_info {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .pair_option {
+                                display: flex;
+
+                                .pair_icon {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                .pair_select {
+                                    margin-left: 0.5rem;
+                                    
+                                    select {
+                                        color: #FFF;
+                                        background: transparent;
+                                        border: none;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        text-transform: capitalize;
+                                    }
+                                    .pair_name {
+                                        color: #8C8C8D;
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        min-width: 100px;
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
+
+                            .balance {
+                                color: #8C8C8D;
+                                font-size: 12px;
+                                font-weight: 300;
+                                text-transform: capitalize;
+
+                                #balance {
+                                    color: #FFF;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+
+                        .coin_price {
+                            margin: 0;
+                            color: #FFF;
+                            font-size: 24px;
+                            font-weight: 500;
+                            
+                            sub {
+                                color: #8C8C8D;
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .eth_to_dai_convert_amount {
+                        width: 100%;
+                        text-align: center;
+                        padding: 1rem;
+                        color: #FFF;
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: capitalize;
+
+                        #one_eth {
+                            font-weight: 500;
+                        }
+                        #dai_amount {
+                            font-weight: 400;
+                        }
+
+                    }
+
+                    .swap-connect-btn {
+                        width: 100%;
+                        .connect {
+                            background: #B6F509;
+                            color: #000;
+                            width: 100%;
+                            border: none;
+                            color: #17234C;
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: 700;
+                            height: 50px;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    .others {
+                        margin-top: 0.75rem;
+                        display: flex;
+                        justify-content: space-between;
+                        .card {
+                            width: 101px;
+                            height: 76px;
+                            padding: 0.5rem;
+                            background: #34363E;
+
+                            div {
+                                color: #FFF;
+                                text-align: center;
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-transform: capitalize;
+
+                                #dai-fee {
+                                    font-weight: 300;
+                                }
+                            }
+
+                            p {
+                                color: #8C8C8D;
+                                text-align: center;
+                                font-size: 11px;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+
+                    .eth2usdt {
+                        width: 100%;
+                        background: #34363E;
+                        border-radius: 8px;
+                        height: 38px;
+                        margin-top: 0.5rem;
+                        color: #FFF;
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        display: flex;
+                        align-items: center;
+                        padding: 0.5rem;
+
+                        #amount {
+                            margin-left: 0.2rem;
+                            margin-right: 0.2rem;
+                            color: #8C8C8D;
+                        }
+                    }
+                }
+
+                //  ******LIMIT*******//
+                .limit {
+                    .set-at-rate .card {
+                        background: #34363E;
+                        margin-top: 0.5rem;
+                        padding: 0.5rem;
+                        border-radius: 8px;
+                        .set-at-rate-head {
+                            display: flex;
+                            justify-content: space-between;
+                            .Sell {
+                                color: #8C8C8D;
+                                font-family: Poppins;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 300;
+                                line-height: normal;
+                                text-transform: capitalize;
+                            }
+
+                            .Set {
+                                color: #B6F509;
+                                text-align: right;
+                                font-family: Poppins;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                text-transform: capitalize;
+
+                                ion-icon {
+                                    color: #494A52;
+                                }
+                            }
+
+                        }
+                        .rate {
+                            color: #FFF;
+                            font-family: Poppins;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .expiration .card {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                        border-radius: 8px;
+                        background: #34363E;
+                        padding: 0.3rem;
+                        margin-top: 0.5rem;
+
+                        #expires {
+                            color: #8C8C8D;
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: normal;
+                            text-transform: capitalize;
+                        }
+
+                        #time {
+                            display: flex;
+                            align-items: center;
+                            color: #FFF;
+                            text-align: right;
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .call-to-action {
+                        border-radius: 8px;
+                        background: #B6F509;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 8px;
+                        border: none;
+                        margin-top: 0.3rem;
+                        color: #17234C;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .convert-tokens {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                        margin-top: 0.3rem;
+                         
+                        .token1, .token2 {
+                            width: 154.5px;
+                            height: 70px;
+                            border-radius: 8px;
+                            background: #34363E;
+        
+                            .token_price {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                text-transform: capitalize;
+                                text-align: center;
+                            }
+                            .token_name, .currency {
+                                color: #8C8C8D;
+                                font-family: Poppins;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 300;
+                                line-height: normal;
+                                text-transform: capitalize;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                //  ******DCA***** ///
+
+                .DCA {
+                    .expiration .card {  
+                        margin-top: 1rem;
+                        justify-content: flex-start;
+                        padding: 1rem;
+                    }
+                    .fee_charges {
+                        color: #8C8C8D;
+                        font-family: Poppins;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: capitalize;
+                        text-align: center;
+                        padding: 2rem;
+                    }
+                }
+            }
+        }
+
+        //  *********CHART ACTIVITIES Ends********//
+    }
+
+     // ********CHART Transactions ****** //
+    
+
+     .chart_transactions {
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 230px;
+        background: #1A1C1E;
+        border-radius: 10px;
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            background-color: #34363E;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 0 1.5rem;
+            position: relative;
+
+            .active_orders, .order_history {
+                margin-right: 1.5rem;
+                padding: 0.5rem 0;
+                cursor: pointer;
+                color: #8C8C8D;
+                font-family: Raleway;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: capitalize;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 25px;
+                    transform: scaleY(0);
+                    width: 0;
+                    height: 4px;
+                    background-color: #B6F509;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+
+                    transition: width 0.3s ease;
+                }
+
+                &.active {
+                    color: #FFF;
+                    font-family: Raleway;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    position: relative;
+
+                    &::after {
+                        width: 30px;
+                        transform: scaleY(100%);
+                    }
+
+                }
+            }
+
+            .close-btn {
+                position: absolute;
+                text-align: right;
+                right: 15px;
+                top: 4px;
+                color: #8C8C8D;
+                font-size: 1.5rem;
+                transition: all 0.5s ease;
+
+                &.active {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &-body {
+            margin-top:1rem;
+            padding: 1rem;
+            color: #8C8C8D;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            h6 {
+                border-bottom: 1.3rem;
+            }
+            .activities_list {
+                p {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                }
+            }
+            .col-3 .row .col-12 {
+                color: #F1A03B;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+    }
+
+}
+
+// ***********MODAL CONTAINER ************ //
+
+
+
+
+.modal-swapRoute-container {
+    .swaproute-header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .swaproute-header-icon {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .swaproute-header-title {
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            margin-left: 5px;
+        }
+        .swaproute-close-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+    
+            ion-icon {
+                color: #fff;
+            }
+        }
+    }
+    
+    .swaproute-body {
+        .swaproute-action-btn {
+            background-color: #34363E;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border-radius: 8px;
+            padding: 0.2rem;
+
+
+            button {
+                width: 100%;
+                border: none;
+                color: #8C8C8D;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 25px;
+                background-color: #34363E;
+                padding: 0.2rem;
+                border-radius: 6px;
+                transition: all ease 0.4s;
+
+                &.active {
+                    border-radius: 6px;
+                    background: #B6F509;
+                    color: #17234C;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .swaproute-action-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            
+            #max-return {
+                .card {
+                    cursor: pointer;
+                    height: 219px;
+                    margin-bottom: 1rem;
+                    border-radius: 8px;
+                    background: #34363E;
+
+                    .route-container {
+                        // padding-left: 2rem;
+                        height: 100%;
+                        border-radius: 8px;
+                        
+                        &.active {
+                            .route-header {
+                                background-color: rgba(182, 245, 9, 0.2);
+                            }
+                            border: 2px solid #B6F509;
+                            .selected ion-icon {
+                                color: #B6F509;
+                                font-size: 15px;
+                            }
+                        }
+                        .route-header {
+                            background-color: #494A52;
+                            height: 27px;
+                            color: #FFF;
+                            font-size: 10px;
+                            font-weight: 500;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 1rem;
+                            width: 100%;
+                            border-top-left-radius: 8px;
+                            border-top-right-radius: 8px;
+                            margin-bottom: 1rem;
+
+                            .route-interval {
+                                font-size: 15px;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                margin-right: 0.5rem;
+                                    
+                                span {
+                                    color: #fff;
+                                    opacity: 0.31;
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .gas {
+                                font-size: 15px;
+                                svg {
+                                    margin-right: 0.2rem;
+                                }
+                            }
+                            .selected {
+                                font-size: 15px;
+                            }
+                        }
+                        .route-body {
+                            margin-left: 1.5rem;
+                            border-left: 2px dotted #6F7374;
+                            padding-left: 2rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 70%;
+                            color: #FFF;
+                            font-size: 14px;
+                            font-weight: 700;
+                            text-transform: capitalize;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 40px;
+                                left: 2px;
+                                height: 50px;
+                                width: 50px;
+                                background: url(../img/app/Eth_icon.svg) no-repeat center;
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 2px;
+                                height: 50px;
+                                width: 50px;
+                                background: url(../img/app/dai_icon.svg) no-repeat center;
+                            }
+
+                            #location {
+                                color: #8C8C8D;
+                                font-size: 11px;
+                                font-weight: 300;
+                                line-height: 17px; 
+                                margin-left: 0.5rem;
+                            }
+
+                            .passtru {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                position: relative;
+                                font-size: 12px;
+                                font-weight: 600;
+                                margin-left: 0.5rem;
+
+                                .icon {
+                                    margin-right: 0.5rem;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    top: 8px;
+                                    left: -45px;
+                                    background: url(../img/app/straight_arrow.svg) no-repeat;
+                                    width: 40px;
+                                    height: 40px;
+
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                }
+
+                .save_route-btn {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    button {
+                        color: #17234C;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 700;
+                        border: none;
+                        width: 100%;
+                        border-radius: 8px;
+                        background: #B6F509;
+                        height: 40px;
+                    }
+                }
+            }
+
+            #lowest-gas-fee {
+              .card {
+                    cursor: pointer;
+                    height: 219px;
+                    margin-bottom: 1rem;
+                    border-radius: 8px;
+                    background: #34363E; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    ion-icon {
+                        font-size: 90px;
+                        color: #B6F509;
+                    }
+              }  
+            }
+        }
+    }
+}
+
+
+
+
+  

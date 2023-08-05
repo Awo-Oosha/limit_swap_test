@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8bf98d0.css",
+    "main.css": "/static/css/main.0445486c.css",
     "main.js": "/static/js/main.60480358.js",
     "static/js/787.609bcf66.chunk.js": "/static/js/787.609bcf66.chunk.js",
     "static/media/app_background.svg": "/static/media/app_background.0ed5df14a3d3a9f20cd2.svg",
@@ -21,18 +21,18 @@
     "static/media/toggle_on.svg": "/static/media/toggle_on.7578b61e0cb19b411194.svg",
     "static/media/toggle_off.svg": "/static/media/toggle_off.64d5d0b73da5a3c89320.svg",
     "static/media/card_reload_icon.svg": "/static/media/card_reload_icon.db28cfd26890b52a2b914dd50a719283.svg",
-    "static/media/wallet.svg": "/static/media/wallet.2b1dae386ca97b8da3d09753e3ab5e49.svg",
     "index.html": "/index.html",
+    "static/media/wallet.svg": "/static/media/wallet.2b1dae386ca97b8da3d09753e3ab5e49.svg",
     "static/media/down_arrow.svg": "/static/media/down_arrow.6ae80d1515570ef55c03636e33f08ad7.svg",
     "static/media/services-bg_path.svg": "/static/media/services-bg_path.821d0c09d2e29b967765.svg",
     "static/media/card_add_icon.svg": "/static/media/card_add_icon.b746ecce9fcc2dc1d8f5070ba0de2ee5.svg",
     "static/media/straight_arrow.svg": "/static/media/straight_arrow.24d8bc4585a57ef38bfd.svg",
-    "main.c8bf98d0.css.map": "/static/css/main.c8bf98d0.css.map",
+    "main.0445486c.css.map": "/static/css/main.0445486c.css.map",
     "main.60480358.js.map": "/static/js/main.60480358.js.map",
     "787.609bcf66.chunk.js.map": "/static/js/787.609bcf66.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8bf98d0.css",
+    "static/css/main.0445486c.css",
     "static/js/main.60480358.js"
   ]
 }
