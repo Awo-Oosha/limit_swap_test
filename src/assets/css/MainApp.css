@@ -233,7 +233,6 @@
 .MainApp .chart-activities .inner-card .activities-nav .activities-1 {
   display: flex;
   flex-flow: row wrap;
-  flex: 50%;
 }
 .MainApp .chart-activities .inner-card .activities-nav .activities-1 div {
   opacity: 0.3;
@@ -244,7 +243,6 @@
   font-weight: 600;
 }
 .MainApp .chart-activities .inner-card .activities-nav .activities-2 {
-  flex: 50%;
   margin: auto;
   display: flex;
   justify-content: flex-end;

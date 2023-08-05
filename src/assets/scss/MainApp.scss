@@ -276,8 +276,6 @@
                     .activities-1 {
                         display: flex;
                         flex-flow: row wrap;
-                        flex: 50%;
-                        
                         div {
                             // margin-right: .75rem;
                             opacity: 0.3;
@@ -291,7 +289,6 @@
                     }
 
                     .activities-2 {
-                        flex: 50%;
                         margin: auto;
                         display: flex;
                         justify-content: flex-end;
