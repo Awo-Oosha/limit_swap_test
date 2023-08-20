@@ -30,9 +30,9 @@ export default function MainApp() {
   const [intervalButton, setintervalButton] = useState('1D')
   const [isToggled, setIsToggled] = useState(false);
 
-  const Chart = useRef(null);
-  const Chart_activities = useRef(null);
-  const Chart_transactions =useRef(null);
+  const Chart = useRef('');
+  const Chart_activities = useRef('');
+  const Chart_transactions =useRef('');
 
   useEffect(() => {
     if (isToggled) {
@@ -665,7 +665,7 @@ export default function MainApp() {
                             </div>
                           </div>
 
-                          <div className='expiration'>
+                        <div className='expiration'>
                           <div className='card'>
                             <div id='expires'> Execute every: </div>
                             <div id='time'> 1 Day <ion-icon name="chevron-down-outline"></ion-icon></div>

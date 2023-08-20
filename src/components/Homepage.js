@@ -1,118 +1,98 @@
-import '../assets/css/Homepage.css';
-import mainBG from '../assets/img/main-sectionBG.svg';
-import services_bit from '../assets/img/services_btcwallet_icon.svg';
-import services_mine from '../assets/img/services_mining_icon.svg';
-import services_safe from '../assets/img/services_safe_icon.svg';
-import about_image from '../assets/img/about_image.svg';
+import bitwallet_icon from '../assets/images/services_btcwallet_icon.svg'
+import safe_icon from '../assets/images/services_safe_icon.svg'
+import mining_icon from '../assets/images/services_mining_icon.svg'
+import Header from "./Header";
+import about_image from '../assets/images/about_image.svg'
+import {Link} from "react-router-dom";
+// import about_image from '../assets/images/about_image.svg'
 
-import { Link } from 'react-router-dom';
 const Homepage = () => {
-    const main_background = `url(${mainBG})`;
-    return (
-        <div className="homepage">
-            <header className='header'>
-            <nav className="navbar navbar-expand-lg">
-                <div className="container">
-                    <div className="navbar-brand">LimitSwap</div>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><ion-icon name="grid-outline"></ion-icon></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                        <Link to='/ecosystem' className="nav-link">Ecosystem</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/community' className="nav-link">Community</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/governance' className="nav-link">Governance</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/developers' className="nav-link">Developers</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/blog' className="nav-link">Blog</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/faq' className="nav-link">FAQ</Link>
-                        </li>
-                        <li className="nav-item">
-                        <Link to='/jobs' className="nav-link">Jobs</Link>
-                        </li>
-                    </ul>
-                    <button className='LaunchBtn'>
-                        <Link to='/app' className='nav-link'>
-                        Launch App
-                        </Link>
-                    </button>
-                    </div>
-                </div>
-            </nav>
-            </header>
+
+
+    return(
+
+        <div className='homepage'>
+            <Header />
             <main className='main'>
-                <section className='main-section' style={{backgroundImage: main_background}}>
+                <section className='section_1'>
                     <div className='container'>
-                        <div className='main-section-head'>Limit<span id='swap'>Swap</span><br></br> protocol</div>
-                        <p className='main-section-desc'>LimitSwap, earn, and build on the leading decentralized crypto trading protocol.</p>
-                    </div>
-                </section>
-
-                <section className='services'>
-                    <div className='container'>
-                        <div className='services-head'>
-                            Our <span id='services'>Services</span>
-                        </div>
-                        <p className='services-desc'>
-                            Explore our range of cryptocurrency services and take advantage of the benefits of the digital currrency revolution.
-                        </p>
-
-                        <div className='card-container'>
-                            <div class="card">
-                                <img src= {services_bit} class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                    <h5 class="card-title">Build Defi apps</h5>
-                                    <p class="card-text">
-                                    Our secure cryptocurrency wallet is
-                                    designed to prioritize user security &
-                                    privacy. with easy-to-use features & a
-                                    streamlined interface, users can access
-                                    their digital assets quickly & securely
-                                    from anywahere in the world.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src={services_safe} class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                    <h5 class="card-title">V3 Whitepaper</h5>
-                                    <p class="card-text">
-                                    Our safe and secure cryptocurrency is
-                                    designed with user security in mind.
-                                    With advanced authenticcation & multi-factor verification processes, user
-                                    can enjoy complete control over their
-                                    digital assets without compromising.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src={services_mine} class="card-img-top" alt=""></img>
-                                <div class="card-body">
-                                    <h5 class="card-title">Limitswap Governance</h5>
-                                    <p class="card-text">
-                                    Our cryptocurrency mining services are
-                                    designed to maximize profitability while
-                                    minimizing costs. With low electricity
-                                    rates & advanced mining algorithms,
-                                    users can. earn more cryptocurrency with less energy consumption & equipmwnt.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className='section_1-header'>
+                            <p className= 'header-title'>
+                                LIMIT<span>SWAP</span> <br/>
+                                PROTOCOL
+                            </p>
+                            <p className='header-desc'>
+                                LimitSwap, earn, and build on the leading decentralized crypto <br /> trading protocol.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                <section className='about'>
+                <section className='section_2'>
+                    <div className='container'>
+                        <div className='section_2-header'>
+                            <p className= 'header-title'>
+                                Our <span>Services</span>
+                            </p>
+                            <p className='header-desc'>
+                                Explore our range of cryptocurrency services and take advantage of the benefits of the <br /> digital currrency revolution.                            </p>
+                        </div>
+
+                        <div className='section_2-body'>
+                            <div className='row'>
+                                <div className='col-sm-12 col-lg-4 col-md-4'>
+                                    <div className='card'>
+                                        <img src={bitwallet_icon} className="card-img-top" alt="..."></img>
+                                        <div className="card-body">
+                                            <h5 className="card-title">Build Defi apps</h5>
+                                            <p className="card-text">
+                                                Our secure cryptocurrency wallet is
+                                                designed to prioritize user security &
+                                                privacy. with easy-to-use features & a
+                                                streamlined interface, users can access
+                                                their digital assets quickly & securely
+                                                from anywahere in the world.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-sm-12 col-lg-4 col-md-4'>
+                                    <div className='card'>
+                                        <img src={safe_icon} alt="safe_icon.svg" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">V3 Whitepaper</h5>
+                                            <p className="card-text">
+                                                Our safe and secure cryptocurrency is
+                                                designed with user security in mind.
+                                                With advanced authentication & multi-factor verification processes, user
+                                                can enjoy complete control over their
+                                                digital assets without compromising.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-sm-12 col-lg-4 col-md-4'>
+                                    <div className='card'>
+                                        <img src={mining_icon} alt="mining_icon.svg" />
+                                        <div className="card-body">
+                                            <h5 className="card-title">Limitswap Governance</h5>
+                                            <p className="card-text">
+                                                Our cryptocurrency mining services are
+                                                designed to maximize profitability while
+                                                minimizing costs. With low electricity
+                                                rates & advanced mining algorithms,
+                                                users can. earn more cryptocurrency with less energy consumption &
+                                                equipment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className='section_3'>
                     <div className='wrap'>
                         <div className='container'>
                             <div className='row'>
@@ -123,63 +103,55 @@ const Homepage = () => {
                                 </div>
                                 <div className='col-lg-6 col-sm-12 col-md-12'>
                                     <div className='about-info'>
-                                    <div className='about-head'>
-                                    Trusted <span id='platform'>Platform</span>
-                                    <span id='anytime'> anytime</span> & anywhere.
-                                    </div>
-                                    <p className='about-desc'>
-                                    Our safe and secure cryptocurrency is designed with user security in mind.
-                                    <br></br>
-                                    <br></br>
-                                    With advanced authenticcation & multi-factor verification processes, user can enjoy complete control over their
-                                    digital assets without compromising.
-                                    </p>
-                                    <button className='read-more-btn'>
-                                        <Link to='/about' className='read-more-btn-link'>
-                                            Read More
-                                        </Link>
-                                    </button>
+                                        <div className='about-head'>
+                                            Trusted <span id='platform'>Platform</span>
+                                            <span id='anytime'> anytime</span> & anywhere.
+                                        </div>
+                                        <p className='about-desc'>
+                                            Our safe and secure cryptocurrency is designed with user security in mind.
+                                            <br></br>
+                                            <br></br>
+                                            With advanced authenticcation & multi-factor verification processes, user can enjoy complete control over their
+                                            digital assets without compromising.
+                                        </p>
+                                        <button className='read-more-btn'>
+                                            <Link to='/about' className='read-more-btn-link'>
+                                                Read More
+                                            </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <section className="d-lg-none d-md-none section_3-small">
+
+                    <div className='about-head'>
+                        Trusted <span id='platform'>Platform</span>
+                        <span id='anytime'> anytime</span> & anywhere.
+                    </div>
+                    <p className='about-desc'>
+                        Our safe and secure cryptocurrency is designed with user security in mind.
+                        <br></br>
+                        <br></br>
+                        With advanced authenticcation & multi-factor verification processes, user can enjoy complete control over their
+                        digital assets without compromising.
+                    </p>
+                    <button className='read-more-btn d-none'>
+                        <Link to='/about' className='read-more-btn-link'>
+                            Read More
+                        </Link>
+                    </button>
+
+                    <div className="about-image">
+
+                    </div>
+
+                </section>
             </main>
-            <footer className="Footer">
-            <div className='container'>
-            <ul className="footer-nav me-auto mb-2 mb-lg-0">
-                        <li className="footer-nav-item">
-                        <Link to='/ecosystem' className="nav-link">Ecosystem</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/community' className="nav-link">Community</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/governance' className="nav-link">Governance</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/developers' className="nav-link">Developers</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/blog' className="nav-link">Blog</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/faq' className="nav-link">FAQ</Link>
-                        </li>
-                        <li className="footer-nav-item">
-                        <Link to='/jobs' className="nav-link">Jobs</Link>
-                        </li>
-            </ul>
-            <ul className='footer-social-icons'>
-                <li><ion-icon name="logo-instagram"></ion-icon></li>
-                <li><ion-icon name="logo-facebook"></ion-icon></li>
-                <li><ion-icon name="logo-linkedin"></ion-icon></li>
-                <li><ion-icon name="logo-twitter"></ion-icon></li>
-            </ul>
-            </div>
-            </footer>
-            </div>
+        </div>
     );
 };
 
