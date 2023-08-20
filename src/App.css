@@ -1,1 +1,1628 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.header {
+  background: #000;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.header .navbar-brand {
+  font-size: 36px;
+  font-weight: 700;
+  margin-right: 5rem;
+  color: #BAFD02;
+  text-decoration: none;
+}
+.header .navbar-brand:hover {
+  color: #BAFD02;
+}
+.header .navbar .nav-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header .navbar .navbar-nav {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .navbar .navbar-nav .nav-link {
+  color: #8E8E8E;
+}
+.header .navbar .right-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 8rem;
+  flex-flow: row wrap;
+}
+.header .navbar .right-header .chart_toggle .toggle-name {
+  color: #FFF;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 1rem;
+}
+.header .navbar .right-header .chart_toggle .toggle {
+  width: 45px;
+  height: 17px;
+  background: rgb(52, 54, 62);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.header .navbar .right-header .chart_toggle .toggle::after {
+  position: absolute;
+  content: "";
+  background: url("./assets/images/app/toggle_off.svg") no-repeat center;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  top: -4px;
+  left: -5px;
+  transition: all 0.5s ease;
+}
+.header .navbar .right-header .chart_toggle .toggle.active::after {
+  content: "";
+  background: url(./assets/images/app/toggle_on.svg) no-repeat center;
+  top: -6px;
+  left: 17px;
+  background-size: cover;
+}
+.header .navbar .right-header .ChainItem {
+  color: #BAFD02;
+  padding: 0.3rem 1rem;
+  border: 1px solid #BAFD02;
+  border-radius: 10px;
+}
+.header .navbar .right-header .ChainItem img {
+  margin-right: 0.5rem;
+}
+.header .navbar .right-header .launchBtn {
+  border: none;
+  background: #BAFD02;
+  border-radius: 8px;
+  padding: 0.5rem 20px;
+  text-align: center;
+  color: #000;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.header .navbar .right-header .launchBtn-link {
+  color: #000;
+  text-decoration: none;
+}
+.header .navbar .right-header .launchBtn-link .launchBtn {
+  border: none;
+  background: #BAFD02;
+  border-radius: 8px;
+  padding: 0.5rem 36px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.connectModal {
+  transform: scale(0);
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  display: flex;
+}
+.connectModal.active {
+  transform: scale(100%);
+  display: flex;
+}
+.connectModal .modalContent {
+  border: 1px solid #888;
+  width: 550px;
+  height: 650px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: #1A1C1E;
+}
+.connectModal .modalContent .connect-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.connectModal .modalContent .connect-header-title {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.connectModal .modalContent .connect-header .connect-close {
+  cursor: pointer;
+}
+.connectModal .modalContent .connect-header .connect-close ion-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.connectModal .modalContent .terms {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  background: #34363E;
+  padding: 0.75rem 1.5rem;
+}
+.connectModal .modalContent .terms input[type=checkbox] {
+  accent-color: #BAFD02;
+  width: 18px;
+  height: 18px;
+}
+.connectModal .modalContent .terms .read_understand {
+  margin-left: 1rem;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.connectModal .modalContent .terms .read_understand span {
+  color: #BAFD02;
+}
+.connectModal .modalContent .Networks-Heading {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 1rem;
+  margin-top: 1rem;
+}
+.connectModal .modalContent .Networks-Heading-Number {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.connectModal .modalContent .Networks-Heading-Title {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+.connectModal .modalContent .Networks .ChainNetworks {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+}
+.connectModal .modalContent .Networks .ChainNetworks div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 0.75rem 0.4rem;
+  cursor: pointer;
+}
+.connectModal .modalContent .Networks .ChainNetworks div img {
+  height: 50px;
+  width: 50px;
+}
+.connectModal .modalContent .Networks .ChainNetworks div div {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+.connectModal .modalContent .wallet-Heading {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+.connectModal .modalContent .wallet-Heading-number {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.connectModal .modalContent .wallet-Heading-title {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+.connectModal .modalContent .wallet-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.connectModal .modalContent .wallet-container [class*=-con] {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 0.75rem 0.6rem;
+  cursor: pointer;
+}
+.connectModal .modalContent .wallet-container [class*=-con] img {
+  width: 50px;
+  height: 50px;
+}
+.connectModal .modalContent .wallet-container [class*=-con] div {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+.connectModal .modalContent .connectActionBtn {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  background: #BAFD02;
+  text-align: center;
+  color: #17234C;
+  font-family: Poppins sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
+
+.homepage .section_1 {
+  background: url("./assets/images/main-sectionBG.svg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+.homepage .section_1-header {
+  position: absolute;
+  bottom: 0;
+}
+.homepage .section_1-header .header-title {
+  color: #FFF;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+}
+.homepage .section_1-header .header-title span {
+  color: #BAFD02;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90px;
+}
+.homepage .section_1-header .header-desc {
+  color: #D8D8D8;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+.homepage .section_2 {
+  background: url(./assets/images/others_background.svg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+.homepage .section_2 .header-title {
+  color: #FFF;
+  text-align: center;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.homepage .section_2 .header-title span {
+  color: #BAFD02;
+}
+.homepage .section_2 .header-desc {
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.homepage .section_2 .card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background: #1A1C1D;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 360px;
+}
+.homepage .section_2 .card img {
+  width: 50px;
+  height: 60px;
+}
+.homepage .section_2 .card-body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.homepage .section_2 .card-body .card-title {
+  color: #FFF;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
+.homepage .section_2 .card-body .card-text {
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.homepage .section_3 {
+  background: url(./assets/images/others_background.svg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  padding-top: 0.75rem;
+  padding-bottom: 4rem;
+}
+.homepage .section_3 .wrap {
+  background: url("./assets/images/services-bg_path.svg") no-repeat;
+  background-size: cover;
+  background-position: 100px -350px, 0 0;
+  position: relative;
+}
+.homepage .section_3 .about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .section_3 .about-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+.homepage .section_3 .about-image::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 200px;
+  top: 0;
+  border-radius: 798px;
+  opacity: 0.1898927242;
+  background: radial-gradient(48.49% 48.49% at 48.68% 48.58%, rgba(210, 210, 210, 0.86) 0%, rgba(216, 216, 216, 0.01) 100%);
+}
+.homepage .section_3 .about-head {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+}
+.homepage .section_3 .about-head #platform {
+  color: #BAFD02;
+  font-weight: 700;
+}
+.homepage .section_3 .about-head #anytime {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 700;
+}
+.homepage .section_3 .about-desc {
+  margin-top: 1rem;
+  color: #D8D8D8;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.homepage .section_3 .read-more-btn {
+  border-radius: 8px;
+  background: #BAFD02;
+  border: none;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+}
+.homepage .section_3 .read-more-btn .read-more-btn-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.mainWindow {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: url(./assets/images/app_background.svg) no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+.mainWindow .Chart {
+  transform: translateX(50%);
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.mainWindow .Chart.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 0;
+  pointer-events: all;
+}
+.mainWindow .chartBox {
+  background: #1A1C1E;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 566px;
+}
+.mainWindow .chartBox .chart {
+  background: #1A1C1D;
+}
+.mainWindow .chartBox .chart-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.mainWindow .chartBox .chart-heading .pair_price .pair {
+  display: flex;
+  align-items: center;
+}
+.mainWindow .chartBox .chart-heading .pair_price .pair_icon {
+  margin-right: 0.5rem;
+}
+.mainWindow .chartBox .chart-heading .pair_price .pair_icon .tokenOne {
+  width: 30px;
+  height: 30px;
+  outline: 4px solid #000;
+  border-radius: 20px;
+  transform: translateX(10px);
+}
+.mainWindow .chartBox .chart-heading .pair_price .pair_icon .tokenTwo {
+  width: 30px;
+  height: 30px;
+  z-index: 0;
+}
+.mainWindow .chartBox .chart-heading .pair_price .pair_name {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.mainWindow .chartBox .chart-heading .chart-buttons-container {
+  display: flex;
+}
+.mainWindow .chartBox .chart-heading .chart-buttons-container .buttons {
+  background: #34363E;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 30px;
+}
+.mainWindow .chartBox .chart-heading .chart-buttons-container .buttons button {
+  border: none;
+  background: #34363E;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+}
+.mainWindow .chartBox .chart-heading .chart-buttons-container .buttons button.active {
+  background-color: #B6F509;
+  color: #17234C;
+  font-weight: 700;
+}
+.mainWindow .chartBox .chart-heading .chart-buttons-container .expand-btn {
+  margin-left: 1rem;
+  background-color: #34363E;
+  padding: 1rem;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: #FFF;
+}
+.mainWindow .chartBox .chart-body {
+  margin-top: 2rem;
+}
+.mainWindow .chartBox .chart-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mainWindow .TradeBox {
+  transform: translateX(-90%);
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+.mainWindow .TradeBox.active {
+  transform: translateX(0);
+}
+.mainWindow .tradeBox-container {
+  width: 350.54px;
+  height: 566px;
+  border-radius: 20px;
+  background: linear-gradient(rgb(4, 5, 1), rgb(186, 253, 2), rgb(26, 33, 6), rgb(186, 253, 2));
+  box-shadow: 0 10px 33px 1px rgba(0, 0, 0, 0.81);
+  padding: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 15px;
+  padding: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainWindow .tradeBox-container .tradeBox-header_actions {
+  display: flex;
+}
+.mainWindow .tradeBox-container .tradeBox-header_actions div {
+  margin-left: 0.4rem;
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.mainWindow .tradeBox-container .tradeBox-header_actions div.active {
+  opacity: 1;
+  font-weight: 600;
+}
+.mainWindow .tradeBox-container .tradeBox-header_settings {
+  display: flex;
+  flex-flow: row wrap;
+}
+.mainWindow .tradeBox-container .tradeBox-header_settings .actionIcon {
+  margin: 0 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input {
+  position: relative;
+  margin-top: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard {
+  border-radius: 8px;
+  background: #34363E;
+  height: 144px;
+  padding: 1rem;
+  margin-bottom: 0.4rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info .tokenSelect {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info .tokenBalance {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info .tokenBalance #balance {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info img {
+  width: 30.569px;
+  height: 30.4px;
+  object-fit: contain;
+  margin-right: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info [class*=Names] {
+  margin-left: 0.75rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info [class*=Names] .tokenTicker {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info [class*=Names] .tokenName {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .info #select {
+  width: 7.193px;
+  height: 4.423px;
+  text-align: center;
+  margin-left: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne sub {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne input[type=text] {
+  margin-top: 0.4rem;
+  max-width: 160.235px;
+  height: 36px;
+  color: #FFF;
+  background: transparent;
+  font-family: Poppins sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  border: none;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne input[type=text]:focus {
+  border: none;
+  outline: none;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .spilpageTolerance {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .spilpageTolerance button {
+  border: none;
+  border-radius: 6px;
+  background: #494A52;
+  color: #8C8C8D;
+  text-align: center;
+  font-family: Poppins sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetOne .spilpageTolerance button.active {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info .tokenSelect {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info .tokenBalance {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info .tokenBalance #balance {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info img {
+  width: 30.569px;
+  height: 30.4px;
+  object-fit: contain;
+  margin-right: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info [class*=Names] {
+  margin-left: 0.75rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info [class*=Names] .tokenTicker {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info [class*=Names] .tokenName {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .info #select {
+  width: 7.193px;
+  height: 4.423px;
+  text-align: center;
+  margin-left: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo sub {
+  color: #8C8C8D;
+  font-family: Poppins sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo input[type=text] {
+  margin-top: 0.4rem;
+  max-width: 160.235px;
+  height: 36px;
+  color: #FFF;
+  background: transparent;
+  font-family: Poppins sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  border: none;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo input[type=text]:focus {
+  border: none;
+  outline: none;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .spilpageTolerance {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .spilpageTolerance button {
+  border: none;
+  border-radius: 6px;
+  background: #494A52;
+  color: #8C8C8D;
+  text-align: center;
+  font-family: Poppins sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .mycard .assetTwo .spilpageTolerance button.active {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.mainWindow .tradeBox-container .tradeBox-input .inputTwo {
+  height: 106px;
+}
+.mainWindow .tradeBox-container .tradeBox-input .SwitchBtn {
+  position: absolute;
+  background: #BAFD02;
+  border-radius: 30px;
+  outline: 4px solid #1A1C1D;
+  padding: 0;
+  left: 45%;
+  top: 137px;
+}
+.mainWindow .tradeBox-container .tradeBox-input .SwitchBtn ion-icon {
+  color: #1A1C1D;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .TokenConverter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .TokenConverter .tokenFrm {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .TokenConverter .to {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .TokenConverter .tokenTo {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .TokenConverter svg {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.mainWindow .tradeBox-container .tradeBox-input .swapButton {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: #B6F509;
+  color: #17234C;
+  text-align: center;
+  font-family: Poppins sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.mainWindow .tradeBox-container .tradeBox-input .others {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+.mainWindow .tradeBox-container .tradeBox-input .others .card {
+  width: 101px;
+  height: 76px;
+  padding: 0.5rem;
+  background: #34363E;
+}
+.mainWindow .tradeBox-container .tradeBox-input .others .card div {
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .others .card div #dai-fee {
+  font-weight: 300;
+}
+.mainWindow .tradeBox-container .tradeBox-input .others .card p {
+  color: #8C8C8D;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .tokenSummary {
+  width: 100%;
+  background: #34363E;
+  border-radius: 8px;
+  height: 38px;
+  margin-top: 0.5rem;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .tokenSummary #amount {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  color: #8C8C8D;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card {
+  background: #34363E;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card .set-at-rate-head {
+  display: flex;
+  justify-content: space-between;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card .set-at-rate-head .Sellrate {
+  color: #8C8C8D;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card .set-at-rate-head .Set {
+  color: #B6F509;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card .set-at-rate-head .Set ion-icon {
+  color: #494A52;
+}
+.mainWindow .tradeBox-container .tradeBox-input .set-at-rate .card .rate {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .expiration .card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #34363E;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .expiration .card #expires {
+  color: #8C8C8D;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .expiration .card #time {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.mainWindow .tradeBox-container .tradeBox-input .call-to-action {
+  border-radius: 8px;
+  background: #B6F509;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.3rem;
+  color: #17234C;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.mainWindow .tradeBox-container .tradeBox-input .convert-tokens {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+.mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token1, .mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token2 {
+  width: 154.5px;
+  height: 70px;
+  border-radius: 8px;
+  background: #34363E;
+}
+.mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token1 .token_price, .mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token2 .token_price {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: center;
+}
+.mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token1 .token_name, .mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token1 .currency, .mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token2 .token_name, .mainWindow .tradeBox-container .tradeBox-input .convert-tokens .token2 .currency {
+  color: #8C8C8D;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: center;
+}
+.mainWindow .tradeBox-container .tradeBox-input .fee_charges {
+  color: #8C8C8D;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 2rem;
+}
+.mainWindow .history {
+  background-color: #000;
+  height: 100%;
+}
+.mainWindow .chart_transactions {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 230px;
+  background: #1A1C1E;
+  border-radius: 10px;
+}
+.mainWindow .chart_transactions-heading {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #34363E;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0 1.5rem;
+  position: relative;
+}
+.mainWindow .chart_transactions-heading .active_orders, .mainWindow .chart_transactions-heading .order_history {
+  margin-right: 1.5rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #8C8C8D;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.mainWindow .chart_transactions-heading .active_orders::after, .mainWindow .chart_transactions-heading .order_history::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  transform: scaleY(0);
+  width: 0;
+  height: 4px;
+  background-color: #B6F509;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: width 0.3s ease;
+}
+.mainWindow .chart_transactions-heading .active_orders.active, .mainWindow .chart_transactions-heading .order_history.active {
+  color: #FFF;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+}
+.mainWindow .chart_transactions-heading .active_orders.active::after, .mainWindow .chart_transactions-heading .order_history.active::after {
+  width: 30px;
+  transform: scaleY(100%);
+}
+.mainWindow .chart_transactions-heading .close-btn {
+  position: absolute;
+  text-align: right;
+  right: 15px;
+  top: 4px;
+  color: #8C8C8D;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+.mainWindow .chart_transactions-heading .close-btn.active {
+  transform: rotate(180deg);
+}
+.mainWindow .chart_transactions-body {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #8C8C8D;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.mainWindow .chart_transactions-body h6 {
+  border-bottom: 1.3rem;
+}
+.mainWindow .chart_transactions-body .activities_list p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.mainWindow .chart_transactions-body .col-3 .row .col-12 {
+  color: #F1A03B;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.myModalContent .tokenChoice {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.myModalContent .tokenChoice .tokenLogo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+.myModalContent .tokenChoice .tokenChoiceNames {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.myModalContent .tokenChoice .tokenChoiceNames .tokenTicker {
+  opacity: 0.5;
+  font-weight: 300;
+  margin-top: 0.75rem;
+}
+
+.Footer {
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  background-color: #363D3E;
+  color: #8E8E8E;
+  width: 100%;
+}
+.Footer .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Footer .footer-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.Footer .footer-nav .footer-nav-item {
+  padding: 0.5rem;
+}
+.Footer .footer-social-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 1.5rem;
+  width: 20%;
+}
+.Footer .footer-social-icons ion-icon {
+  margin: 0 0.75rem;
+  color: #BAFD02;
+}
+
+.myModal {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  display: flex;
+  transform: scale(0);
+}
+.myModal.active {
+  transform: scale(100%);
+}
+.myModal .modal_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.myModal .modal_content .modal-swapRoute-container {
+  border: 1px solid #1A1C1E;
+  background: #1A1C1E;
+  overflow: auto;
+  border-radius: 20px;
+  width: 360px;
+  outline: none;
+  padding: 20px;
+}
+.myModal .modal_content .swaproute-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.myModal .modal_content .swaproute-header .swaproute-close-btn {
+  cursor: pointer;
+}
+.myModal .modal_content .swaproute-header .swaproute-close-btn ion-icon {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+.myModal .modal_content .swaproute-header-icon {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.myModal .modal_content .swaproute-header-icon img {
+  margin-right: 0.75rem;
+}
+.myModal .modal_content .swaproute-header-title {
+  color: #FFF;
+  font-family: Poppins sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px; /* 156.25% */
+}
+.myModal .modal_content .swaproute-body .swaproute-action-btn {
+  flex-flow: row wrap;
+  display: flex;
+  align-items: center;
+}
+.myModal .modal_content .swaproute-body .swaproute-action-btn button {
+  width: 50%;
+  border: none;
+  color: #8C8C8D;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  background-color: #34363E;
+  padding: 0.2rem;
+  border-radius: 6px;
+  transition: all ease 0.4s;
+}
+.myModal .modal_content .swaproute-body .swaproute-action-btn button.active {
+  border-radius: 6px;
+  background: #B6F509;
+  color: #17234C;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.myModal .modal_content .swaproute-action-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card {
+  cursor: pointer;
+  height: 219px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #34363E;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container {
+  height: 100%;
+  border-radius: 8px;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container.active {
+  border: 2px solid #B6F509;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container.active .route-header {
+  background-color: rgba(182, 245, 9, 0.2);
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container.active .selected ion-icon {
+  color: #B6F509;
+  font-size: 15px;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header {
+  background-color: #494A52;
+  height: 27px;
+  color: #FFF;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 1rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header .route-interval {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header .route-interval span {
+  color: #fff;
+  opacity: 0.31;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header .gas {
+  font-size: 15px;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header .gas svg {
+  margin-right: 0.2rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-header .selected {
+  font-size: 15px;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body {
+  margin-left: 1.5rem;
+  border-left: 2px dotted #6F7374;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 2px;
+  height: 50px;
+  width: 50px;
+  background: url(./assets/images/app/Eth_icon.svg) no-repeat center;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  height: 50px;
+  width: 50px;
+  background: url(./assets/images/app/dai_icon.svg) no-repeat center;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body #location {
+  color: #8C8C8D;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 17px;
+  margin-left: 0.5rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body .passtru {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body .passtru .icon {
+  margin-right: 0.5rem;
+}
+.myModal .modal_content .swaproute-action-container #max-return .card .route-container .route-body .passtru::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: -45px;
+  background: url(./assets/images/app/straight_arrow.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.myModal .modal_content .swaproute-action-container #max-return .save_route-btn {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.myModal .modal_content .swaproute-action-container #max-return .save_route-btn button {
+  color: #17234C;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  background: #B6F509;
+  height: 40px;
+}
+.myModal .modal_content .swaproute-action-container #lowest-gas-fee .card {
+  cursor: pointer;
+  height: 219px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #34363E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myModal .modal_content .swaproute-action-container #lowest-gas-fee .card ion-icon {
+  font-size: 90px;
+  color: #B6F509;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  /* Your CSS styles for mobile phones go here */
+  .navbar-brand {
+    font-size: 15px;
+  }
+  .launchBtn {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+  .homepage {
+    width: 100%;
+  }
+  .homepage .section_1-header .header-desc {
+    margin-top: 2rem;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .homepage .section_2 {
+    height: 100%;
+  }
+  .homepage .section_2 .card {
+    margin-bottom: 1rem;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage .section_2 .card .card-title {
+    text-align: center;
+  }
+  .homepage .section_3 {
+    display: none !important;
+  }
+  .homepage .section_3-small {
+    background: url(./assets/images/others_background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .homepage .section_3-small .about-head {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  .homepage .section_3-small .about-head #platform {
+    color: #BAFD02;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-head #anytime {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-desc {
+    margin-top: 1rem;
+    color: #D8D8D8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .homepage .section_3-small .read-more-btn {
+    border-radius: 8px;
+    background: #BAFD02;
+    border: none;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+  }
+  .homepage .section_3-small .read-more-btn .read-more-btn-link {
+    text-decoration: none;
+    color: #000;
+  }
+  .homepage .section_3-small .about-image {
+    margin-top: 1rem;
+    background: url(./assets/images/small-about.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+  .Footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .Footer .container .navbar-brand {
+    color: #BAFD02;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .Footer .container .footer-nav {
+    display: none;
+  }
+  .Footer .container .footer-social-icons {
+    width: 200px;
+  }
+  .Footer .container .footer-social-icons ion-icon {
+    margin: 0 0.5rem;
+    font-size: 22px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

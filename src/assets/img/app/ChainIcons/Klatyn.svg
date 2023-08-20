@@ -1,0 +1,28 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 5507">
+<g id="Clip path group">
+<mask id="mask0_105_11" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+<g id="clip0_4049_33361">
+<path id="Vector" d="M50 0H0V50H50V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_105_11)">
+<g id="Group">
+<path id="Vector_2" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z" fill="url(#paint0_linear_105_11)"/>
+<path id="Vector_3" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z" fill="url(#paint1_linear_105_11)"/>
+<path id="Vector_4" d="M25.8943 0.0158115L13.1546 33.5527L41.0117 5.8023C42.1848 6.78198 43.2668 7.86717 44.2429 9.04325L28.2862 25L44.1934 41.0162C43.263 42.1301 42.2375 43.1617 41.1294 44.0987L24.9967 28.0702L8.97468 44.1918C7.76529 43.1811 6.65293 42.0582 5.65354 40.8392L19.7335 3.94737L0.0390625 23.5324C0.798769 10.4084 11.6823 0 24.9967 0C25.2972 0 25.5963 0.00529997 25.8943 0.0158115Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_105_11" x1="43.0247" y1="8.11404" x2="10.7879" y2="42.3246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8C00"/>
+<stop offset="1" stop-color="#780000"/>
+</linearGradient>
+<linearGradient id="paint1_linear_105_11" x1="17.6958" y1="17.6535" x2="43.0248" y2="42.9824" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D30168" stop-opacity="0"/>
+<stop offset="1" stop-color="#D30168"/>
+</linearGradient>
+</defs>
+</svg>
