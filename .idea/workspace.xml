@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1359e05-64ed-432c-87fd-5e2090f3b033" name="Changes" comment="" />
+    <list default="true" id="b1359e05-64ed-432c-87fd-5e2090f3b033" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/Footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/Footer.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/Homepage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/Homepage.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/MainApp.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/MainApp.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/Modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/about_image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/1inch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Arbitrum.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Aurora.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Avalanche.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/BNB- chain.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Fantom.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Klatyn.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Polygon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/ChainIcons/Zksync-Era.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Eth_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/Oval Copy 3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/brave.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/coinbase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/metamask.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/small-about.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/trustwallet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/uniswap.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/Wallets/walletconnect.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/card_add_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/card_filter_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/card_plug_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/card_reload_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/charts.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/dai_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/down_arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/eth_dai_pair.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/filling_station.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/hyphen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/routepath.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/straight_arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/swap_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/toggle_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/toggle_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app/wallet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/app_background.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main-sectionBG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/others_background.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/services-bg_path.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/services_btcwallet_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/services_mining_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/services_safe_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/MainApp.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App_Launch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainApp.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +167,8 @@
       <workItem from="1692452307895" duration="24042000" />
       <workItem from="1692483227450" duration="14472000" />
       <workItem from="1692497958906" duration="9653000" />
+      <workItem from="1692545586179" duration="793000" />
+      <workItem from="1692580673193" duration="245000" />
     </task>
     <servers />
   </component>

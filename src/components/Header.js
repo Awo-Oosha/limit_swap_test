@@ -1,60 +1,167 @@
 import { Link, useLocation } from 'react-router-dom';
-import {useEffect, useRef} from "react";
+import { useRef, useContext} from "react";
+import { Context } from '../App';
+import '../assets/css/Header.css';
 
-function Header(){
+import eth_logo from '../assets/images/app/Eth_icon.svg'
+
+
+function Header(props){
+
+    // ********* Navigation Lists
     let HomepageNav = ['Ecosystem', 'Communities', 'Governance', 'Developers', 'Blog', 'FAQ', 'Jobs'];
-
+    let LaunchAppNav = ['Exchange', 'Documentation', 'Announcements'];
 
     //location
-    const location = useLocation()
-    const locationRef = useRef(null)
+    const location = useLocation();
+    // ************* Navbar-Menu Toggle ************************ //
+    
+    const navbarMenuToggler = useRef('')
+    const navbarMenu = useRef('')
+    const navbarClick = () => {
+        navbarMenu.current.classList.contains('active') ? navbarMenu.current.classList.remove("active") : navbarMenu.current.classList.add("active")
+    }
 
-    useEffect(() => {
-        if (location.pathname === '/launch') {
-            locationRef.current.style.position = 'relative'
-        } else {
-            locationRef.current.style.position = 'fixed'
-        }
-    }, [location]);
-
+    // ************** (Global States); ************* //
+    const {
+      chartToggle,
+      isToggled,
+      
+      openModalWalletClick,
+      accountAddress,
+        isConnected,
+    } = useContext(Context);
 
     return(
-        <header className='header' ref={locationRef}>
-            <nav className="navbar navbar-expand-lg large">
-
-                <div className="container d-sm-flex justify-content-sm-start">
-
-                    <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <ion-icon name="menu-sharp"></ion-icon>
-                    </button>
-
-                    <div className="navbar-brand">LimitSwap</div>
-
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        {location.pathname === '/' &&
-                            <div className="nav-con">
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    {HomepageNav.map((nav, index) => (
-                                        <li className="nav-item" key={index}>
-                                            <Link className='nav-link' to={`/${nav.toLowerCase()}`}>
-                                                {nav}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="right-header">
-                                    <Link className='launchBtn-link' to='/launch'>
-                                        <button className='launchBtn' >Launch App</button>
+        <header className='header'>
+            <nav className="mynavbar">
+                <div className="container">
+                    {location.pathname === '/' && (
+                        <div className='NavWraper'>
+                            <div className='d-flex'>
+                                <div className='iconAndBrandname d-flex'>
+                                    <div className='hamburger' ref={navbarMenuToggler} onClick={navbarClick}><ion-icon name="menu-sharp"></ion-icon></div>
+                                    <div className="mynavbar-brand">LimitSwap</div>
+                                </div>
+                                {/* 
+                                    *****Mobile Device Launch Button
+                                */}
+                                <div className='PhonelaunchBtn-con '>
+                                    <Link to='/launch' className='launchLink'>
+                                        <button className='launchBtn'>
+                                            Launch App
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
-                        }
+                            <div className='mynavbarcontainer' ref={navbarMenu}>
 
-                    </div>
+                                <div className='mynavbar-links'>
+                                    <ul className="mynavbar-nav navbar-nav">
+                                        {HomepageNav.map((nav, index) => (
+                                            <li className="nav-item" key={index}>
+                                                <Link className='nav-link' to={`/${nav.toLowerCase()}`}>
+                                                    {nav}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className='NavActionButtons'>
+                                    <div className='launchBtn-con '>
+                                        <Link to='/launch' className='launchLink'>
+                                            <button className='launchBtn'>
+                                                Launch App
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    )}
+
+                    {location.pathname === '/launch' && 
+                        <div className='NavWraper'>
+                            <div className='d-flex'>
+                                <div className='iconAndBrandname d-flex'>
+                                    <div className='hamburger' ref={navbarMenuToggler} onClick={navbarClick}><ion-icon name="menu-sharp"></ion-icon></div>
+                                    <div className="mynavbar-brand">LimitSwap</div>
+                                </div>
+                                {/* 
+                                    *****Mobile Device Launch Button
+                                */}
+                                <div className='MobileNavActions'>
+                                    <div className="chartToggler" id="chart-toggle">
+                                        <div className="toggleName d-none">Chart: </div>
+                                        <div className={`toggle ${isToggled ? 'active' : ''}`} id="toggle" onClick={chartToggle}></div>
+                                    </div>
+                                    <div className='chainConnectSelect'>
+                                        <img src={eth_logo} alt='chainLogo'/>
+                                        <div className='selectChainIcon'>
+                                            <ion-icon name="chevron-down-sharp"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div className='PhoneConnectBtn-con' onClick={openModalWalletClick}>
+                                        <button className='launchBtn'>
+                                            <ion-icon name="wallet-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div className='themeToggler'>
+                                        <ion-icon name="moon-sharp"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='mynavbarcontainer' ref={navbarMenu}>
+
+                                <div className='mynavbar-links'>
+                                    <ul className="mynavbar-nav navbar-nav">
+                                        {LaunchAppNav.map((nav, index) => (
+                                            <li className="nav-item" key={index}>
+                                                <Link className='nav-link' to={`/${nav.toLowerCase()}`}>
+                                                    {nav}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className='NavActionButtons'>
+
+                                    <div className="chart_toggle d-flex justify-content-evenly align-items-center" id="chart-toggle">
+                                        <div className="toggle-name">Chart: </div>
+                                        <div className={`toggle ${isToggled ? 'active' : ''}`} id="toggle" onClick={chartToggle}></div>
+                                    </div>
+
+                                    <div className='chainConnectSelect'>
+                                        <img src={eth_logo} alt='chainLogo'/>
+                                        <div className='chainName'>Ethereum</div>
+                                        <div className='selectChainIcon'>
+                                            <ion-icon name="chevron-down-sharp"></ion-icon>
+                                        </div>
+                                    </div>
+
+                                    <div className='launchBtn-con' onClick={openModalWalletClick}>
+                                        <button className='launchBtn d-flex' style={{width:'160px'}}>
+                                            <ion-icon name="wallet-outline"></ion-icon>
+                                            <div>{ isConnected ? (accountAddress.slice(0,4) + "...." + accountAddress.slice(38)) : "Connect Wallet"}</div>
+                                        </button>
+                                    </div>
+
+                                    
+                                    
 
 
+                                    <div className='themeToggler'>
+                                        <ion-icon name="moon-sharp"></ion-icon>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    }
                 </div>
             </nav>
         </header>

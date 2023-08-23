@@ -1,11 +1,11 @@
 import {Link} from "react-router-dom";
-
+import '../assets/css/Footer.css'
 
 function Footer(){
     return(
         <footer className="Footer">
             <div className='container'>
-                <div className="navbar-brand d-lg-none d-md-none">LimitSwap</div>
+                <div className="navbar-brand d-lg-none">LimitSwap</div>
                 <ul className=" footer-nav">
                     <li className="footer-nav-item">
                         <Link to='/ecosystem' className="nav-link">Ecosystem</Link>
@@ -29,7 +29,7 @@ function Footer(){
                         <Link to='/jobs' className="nav-link">Jobs</Link>
                     </li>
                 </ul>
-                <div className='footer-social-icons d-sm-flex justify-content-center'>
+                <div className='footer-social-icons d-flex justify-content-between'>
                     <ion-icon name="logo-instagram"></ion-icon>
                     <ion-icon name="logo-facebook"></ion-icon>
                     <ion-icon name="logo-linkedin"></ion-icon>

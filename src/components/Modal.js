@@ -7,7 +7,6 @@ Modal.setAppElement('#root');
 const CustomModal = ({ isOpen, onClose, children }) => {
     return (
         <Modal
-
             style={{
                 overlay: {
                     position: 'fixed',

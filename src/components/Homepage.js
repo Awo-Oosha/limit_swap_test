@@ -1,9 +1,11 @@
 import bitwallet_icon from '../assets/images/services_btcwallet_icon.svg'
 import safe_icon from '../assets/images/services_safe_icon.svg'
 import mining_icon from '../assets/images/services_mining_icon.svg'
-import Header from "./Header";
 import about_image from '../assets/images/about_image.svg'
+import about_small from '../assets/images/small-about.svg'
 import {Link} from "react-router-dom";
+import '../assets/css/Homepage.css'
+
 // import about_image from '../assets/images/about_image.svg'
 
 const Homepage = () => {
@@ -12,7 +14,6 @@ const Homepage = () => {
     return(
 
         <div className='homepage'>
-            <Header />
             <main className='main'>
                 <section className='section_1'>
                     <div className='container'>
@@ -146,9 +147,8 @@ const Homepage = () => {
                     </button>
 
                     <div className="about-image">
-
+                        <img src={about_small} alt='AboutImage'/>
                     </div>
-
                 </section>
             </main>
         </div>
