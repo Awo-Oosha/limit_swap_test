@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.51f81bb2.css",
-    "main.js": "/static/js/main.51a891c5.js",
+    "main.css": "/static/css/main.4b96319a.css",
+    "main.js": "/static/js/main.a13ae177.js",
     "static/js/787.609bcf66.chunk.js": "/static/js/787.609bcf66.chunk.js",
     "static/media/app_background.svg": "/static/media/app_background.4ed81e7858517e56f2ea.svg",
     "static/media/main-sectionBG.svg": "/static/media/main-sectionBG.1f7813e9c6553c12bd62.svg",
@@ -39,12 +39,12 @@
     "static/media/Zksync-Era.svg": "/static/media/Zksync-Era.141531133f6bdc5c832d8db166d1e39e.svg",
     "static/media/card_add_icon.svg": "/static/media/card_add_icon.4c56548317eb1650d777ee5bee4b97bd.svg",
     "static/media/straight_arrow.svg": "/static/media/straight_arrow.a19e6304f8f057bef96c.svg",
-    "main.51f81bb2.css.map": "/static/css/main.51f81bb2.css.map",
-    "main.51a891c5.js.map": "/static/js/main.51a891c5.js.map",
+    "main.4b96319a.css.map": "/static/css/main.4b96319a.css.map",
+    "main.a13ae177.js.map": "/static/js/main.a13ae177.js.map",
     "787.609bcf66.chunk.js.map": "/static/js/787.609bcf66.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51f81bb2.css",
-    "static/js/main.51a891c5.js"
+    "static/css/main.4b96319a.css",
+    "static/js/main.a13ae177.js"
   ]
 }

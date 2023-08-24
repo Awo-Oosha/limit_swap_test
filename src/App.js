@@ -4,8 +4,10 @@ import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
 import AppLaunch from "./components/AppLaunch";
 import {Route, Routes} from "react-router-dom";
-import { useState, useEffect, createContext } from 'react';
+import { useState, createContext, useRef } from 'react';
 import CustomModal from './components/CustomModal';
+import Web3 from 'web3';
+
 
 // IMAGES
 import arbitrum from './assets/images/app/Network_icons/Arbitrum.svg'
@@ -31,50 +33,62 @@ import eth_logo from './assets/images/app/Eth_icon.svg'
 export const Context = createContext()
 function App() {
   // ETHERs
-    
-    const [accountAddress, setAccountAddress] = useState("Connect Wallet");
-    const [accountBalance, setAccountBalance] = useState(" ETH");
-    const [isConnected, setIsConnected] = useState(false);
-    
-    const fetchAccountBalance = async (address) => {
-      try {
-        const balance = await window.ethereum.request({
-          method: "eth_getBalance",
-          params: [address, "latest"],
-        });
-        // Convert balance from wei to ether
-         const decimalBalance = parseInt(balance, 16);
-        const etherBalance = (decimalBalance);
-        setAccountBalance(etherBalance);
-        console.log(etherBalance)
-      } catch (err) {
-        console.error(err);
-      }
+
+  const web3 = new Web3(window.ethereum);
+
+  const [accountAddress, setAccountAddress] = useState("Connect Wallet");
+  const [accountBalance, setAccountBalance] = useState(" ETH");
+  const [isConnected, setIsConnected] = useState(false);
+
+  const fetchAccountBalance = async (address) => {
+    try {
+      const balance = await window.ethereum.request({
+        method: "eth_getBalance",
+        params: [address, "latest"],
+      });
+
+      // Convert balance from wei to ether
+      const etherBalance = parseFloat(web3.utils.fromWei(balance, "ether")).toFixed(4);
+      setAccountBalance(etherBalance);
+      console.log(etherBalance);
+    } catch (err) {
+      console.error(err);
+    }
   };
-  
 
-     const connectToMetaMask = async () => {
-       try {
-         const accounts = await window.ethereum.request({
-           method: "eth_requestAccounts",
-         });
-         const account = accounts[0];
-         setAccountAddress(account);
-         setIsConnected(true);
-         fetchAccountBalance(account);
-       } catch (err) {
-         if (err.code === 4001) {
-           console.log("Please connect to MetaMask.");
-         } else {
-           console.error(err);
-         }
-       }
-     };
 
-     
-  useEffect(() => {
-       
-  });
+  const checkBoxRef = useRef(null);
+  const connectBtnRef = useRef(null);
+  const checkBoxContainerRef =useRef(null)
+  const connectToMetaMask = async () => {
+    if (checkBoxRef.current.checked) {
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        const account = accounts[0];
+        setAccountAddress(account);
+        setIsConnected(true);
+        fetchAccountBalance(account);
+        setModalWalletConnect(false);
+        setAccountBalance(fetchAccountBalance(account))
+        checkBoxContainerRef.current.classList.remove("danger");
+      } catch (err) {
+        if (err.code === 4001) {
+          console.log("Please connect to MetaMask.");
+        } else {
+          console.error(err);
+        }
+      }
+    } else {
+      checkBoxContainerRef.current.classList.add('danger');
+    }
+  };
+
+
+
+
+
 
   const [isToggled, setIsToggled] = useState(false);
   const chartToggle = () => {
@@ -93,16 +107,16 @@ function App() {
   return (
     <Context.Provider
       value={{
-            isToggled,
-            chartToggle,
-            modalWalletConnect,
-            openModalWalletClick,
-            closeModalWalletClick,
-            accountAddress,
-            accountBalance,
-              isConnected,
-              connectToMetaMask,
-            
+        isToggled,
+        chartToggle,
+        modalWalletConnect,
+        openModalWalletClick,
+        closeModalWalletClick,
+        accountAddress,
+        accountBalance,
+        isConnected,
+        connectToMetaMask,
+        metamask
       }}
     >
       <>
@@ -122,8 +136,8 @@ function App() {
               </div>
             </div>
 
-            <div className="terms">
-              <input type="checkbox" />
+            <div className="terms" ref={checkBoxContainerRef}>
+              <input type="checkbox" ref={checkBoxRef} />
               <div className="read_understand">
                 I read and accept <span> Terms of Services</span> &{" "}
                 <span>Privacy Policy</span>
@@ -207,7 +221,13 @@ function App() {
               </div>
             </div>
 
-            <button className="connectActionBtn" onClick={connectToMetaMask}>Connect to wallet</button>
+            <button
+              className="connectActionBtn"
+              onClick={connectToMetaMask}
+              ref={connectBtnRef}
+            >
+              Connect to wallet
+            </button>
           </div>
         </CustomModal>
 

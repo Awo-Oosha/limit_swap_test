@@ -8,7 +8,7 @@ const CustomModal = ({ isOpen, onClose, title, children }) => {
   return (
     <div className="modal" style={modalStyle}>
       <div className="modal-content">
-        <span className="close-button" onClick={onClose}><ion-icon name="close-sharp"></ion-icon></span>
+        {/* <span className="close-button" onClick={onClose}><ion-icon name="close-sharp"></ion-icon></span> */}
         <h2 className='title'>{title}</h2>
         <div>{children}</div>
       </div>

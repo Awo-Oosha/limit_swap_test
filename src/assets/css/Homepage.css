@@ -157,7 +157,330 @@
   object-fit: contain;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1400px) {
+@media only screen and (orientation: landscape) {
+  /* Styles for landscape orientation */
+  .homepage .section_1 {
+    background: url("../images/main-sectionBG.svg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  }
+  .homepage .section_1-header {
+    position: absolute;
+    top: 2px;
+  }
+  .homepage .section_1-header .header-title {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  .homepage .section_1-header .header-title span {
+    color: #BAFD02;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 90px;
+  }
+  .homepage .section_1-header .header-desc {
+    color: #D8D8D8;
+    font-style: normal;
+    line-height: 36px;
+    margin-top: 2rem;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .homepage .section_2 {
+    background: url(../images/others_background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .homepage .section_2 .header-title {
+    color: #FFF;
+    text-align: center;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .homepage .section_2 .header-title span {
+    color: #BAFD02;
+  }
+  .homepage .section_2 .header-desc {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .homepage .section_2 .card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: #1A1C1D;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage .section_2 .card img {
+    width: 50px;
+    height: 60px;
+  }
+  .homepage .section_2 .card-body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .homepage .section_2 .card-body .card-title {
+    color: #FFF;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  .homepage .section_2 .card-body .card-text {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.5;
+  }
+  .homepage .section_3 {
+    display: none;
+  }
+  .homepage .section_3-small {
+    background: url(../images/others_background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .homepage .section_3-small .about-head {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  .homepage .section_3-small .about-head #platform {
+    color: #BAFD02;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-head #anytime {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-desc {
+    margin-top: 1rem;
+    color: #D8D8D8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .homepage .section_3-small .read-more-btn {
+    border-radius: 8px;
+    background: #BAFD02;
+    border: none;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+  }
+  .homepage .section_3-small .read-more-btn .read-more-btn-link {
+    text-decoration: none;
+    color: #000;
+  }
+  .homepage .section_3-small .about-image {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage .section_3-small .about-image img {
+    width: auto;
+    height: inherit;
+    object-fit: contain;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+  .homepage .section_1 {
+    background: url("../images/main-sectionBG.svg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  }
+  .homepage .section_1-header {
+    position: absolute;
+    bottom: 0;
+  }
+  .homepage .section_1-header .header-title {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  .homepage .section_1-header .header-title span {
+    color: #BAFD02;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 90px;
+  }
+  .homepage .section_1-header .header-desc {
+    color: #D8D8D8;
+    font-style: normal;
+    line-height: 36px;
+    margin-top: 2rem;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .homepage .section_2 {
+    background: url(../images/others_background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .homepage .section_2 .header-title {
+    color: #FFF;
+    text-align: center;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .homepage .section_2 .header-title span {
+    color: #BAFD02;
+  }
+  .homepage .section_2 .header-desc {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .homepage .section_2 .card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: #1A1C1D;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage .section_2 .card img {
+    width: 50px;
+    height: 60px;
+  }
+  .homepage .section_2 .card-body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .homepage .section_2 .card-body .card-title {
+    color: #FFF;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  .homepage .section_2 .card-body .card-text {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.5;
+  }
+  .homepage .section_3 {
+    display: none;
+  }
+  .homepage .section_3-small {
+    background: url(../images/others_background.svg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .homepage .section_3-small .about-head {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  .homepage .section_3-small .about-head #platform {
+    color: #BAFD02;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-head #anytime {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .homepage .section_3-small .about-desc {
+    margin-top: 1rem;
+    color: #D8D8D8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .homepage .section_3-small .read-more-btn {
+    border-radius: 8px;
+    background: #BAFD02;
+    border: none;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+  }
+  .homepage .section_3-small .read-more-btn .read-more-btn-link {
+    text-decoration: none;
+    color: #000;
+  }
+  .homepage .section_3-small .about-image {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage .section_3-small .about-image img {
+    width: auto;
+    height: inherit;
+    object-fit: contain;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* DeskTops */
   .homepage .section_1 {
     background: url("../images/main-sectionBG.svg") no-repeat center;
     background-size: cover;
