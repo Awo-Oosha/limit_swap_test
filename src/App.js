@@ -4,9 +4,9 @@ import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
 import AppLaunch from "./components/AppLaunch";
 import {Route, Routes} from "react-router-dom";
-import { useState, createContext, useRef } from 'react';
+import { useState, createContext, useRef, useEffect } from 'react';
 import CustomModal from './components/CustomModal';
-import Web3 from 'web3';
+import detectEthereumProvider from '@metamask/detect-provider';
 
 
 // IMAGES
@@ -32,47 +32,49 @@ import eth_logo from './assets/images/app/Eth_icon.svg'
 
 export const Context = createContext()
 function App() {
-  // ETHERs
-
-  const web3 = new Web3(window.ethereum);
 
   const [accountAddress, setAccountAddress] = useState("Connect Wallet");
   const [accountBalance, setAccountBalance] = useState(" ETH");
   const [isConnected, setIsConnected] = useState(false);
-
-  const fetchAccountBalance = async (address) => {
-    try {
-      const balance = await window.ethereum.request({
-        method: "eth_getBalance",
-        params: [address, "latest"],
-      });
-
-      // Convert balance from wei to ether
-      const etherBalance = parseFloat(web3.utils.fromWei(balance, "ether")).toFixed(4);
-      setAccountBalance(etherBalance);
-      console.log(etherBalance);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
+  const [hasProvider, setHasProvider] = useState(false);
 
   const checkBoxRef = useRef(null);
   const connectBtnRef = useRef(null);
   const checkBoxContainerRef =useRef(null)
+
+  useEffect(() => {
+    const getProvider = async () => {
+      const provider = await detectEthereumProvider({ silent: true });
+      console.log(provider);
+      setHasProvider(Boolean(provider)); // transform provider to true or false
+    };
+
+    getProvider();
+  }, []);
+    
+  const formatBalance = (rawBalance) => {
+      const balance = (parseInt(rawBalance) / 1000000000000000000).toFixed(3);
+      return balance;
+  };
+
   const connectToMetaMask = async () => {
-    if (checkBoxRef.current.checked) {
+    if(checkBoxRef.current.checked) {
       try {
-        const accounts = await window.ethereum.request({
+        let accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
-        const account = accounts[0];
-        setAccountAddress(account);
+        const balance = formatBalance(
+          await window.ethereum.request({
+            method: "eth_getBalance",
+            params: [accounts[0], "latest"],
+          })
+        );
+        setAccountAddress(accounts[0]);
+        setAccountBalance(balance);
         setIsConnected(true);
-        fetchAccountBalance(account);
-        setModalWalletConnect(false);
-        setAccountBalance(fetchAccountBalance(account))
         checkBoxContainerRef.current.classList.remove("danger");
+        console.log(accounts[0]);
+        console.log(balance);
       } catch (err) {
         if (err.code === 4001) {
           console.log("Please connect to MetaMask.");
@@ -81,14 +83,10 @@ function App() {
         }
       }
     } else {
-      checkBoxContainerRef.current.classList.add('danger');
+      checkBoxContainerRef.current.classList.add("danger");
     }
-  };
-
-
-
-
-
+  };  
+  
 
   const [isToggled, setIsToggled] = useState(false);
   const chartToggle = () => {
@@ -223,7 +221,7 @@ function App() {
 
             <button
               className="connectActionBtn"
-              onClick={connectToMetaMask}
+              onClick={hasProvider ? (connectToMetaMask) : ''}
               ref={connectBtnRef}
             >
               Connect to wallet

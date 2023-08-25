@@ -670,6 +670,7 @@
         }
       
         .section_3 {
+          display: flex;
           background: url(../images/others_background.svg) no-repeat center;
           background-size: cover;
           width: 100%;
@@ -681,7 +682,7 @@
           .wrap {
             background: url('../images/services-bg_path.svg') no-repeat;
             background-size: cover;
-            background-position: 100px -350px, 0 0;
+            background-position: 30px -270px, 0 0;
             position: relative;
           }
       
