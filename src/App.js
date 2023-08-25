@@ -72,6 +72,7 @@ function App() {
         setAccountAddress(accounts[0]);
         setAccountBalance(balance);
         setIsConnected(true);
+        setModalWalletConnect(false);
         checkBoxContainerRef.current.classList.remove("danger");
         console.log(accounts[0]);
         console.log(balance);
