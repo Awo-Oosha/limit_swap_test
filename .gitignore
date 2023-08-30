@@ -28,3 +28,5 @@ yarn-error.log*
 # scss
 /src/assets/scss
 /back
+# Local Netlify folder
+.netlify

@@ -55,7 +55,7 @@ const App_Launch = () => {
   // *********************************************************************** //
   const [prices, setPrices] = useState(null);
   async function fetchPrices(one, two) {
-    const res = await axios.get("http://localhost:3001/tokenPrice", {
+    const res = await axios.get("/.netlify/functions/index/tokenPrice", {
       params: { addressOne: one, addressTwo: two },
     });
     console.log(res.data);
