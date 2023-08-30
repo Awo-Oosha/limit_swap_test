@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useRef, useContext} from "react";
 import { Context } from '../App';
 import '../assets/css/Header.css';
+import '../assets/css/HeaderPatches.css';
 
 import eth_logo from '../assets/images/app/Eth_icon.svg'
 
@@ -26,12 +27,14 @@ function Header(){
     const {
       chartToggle,
       isToggled,
-      
+
       openModalWalletClick,
       accountAddress,
       accountBalance,
       isConnected,
       metamask,
+      connectToMetaMask,
+      hasProvider,
     } = useContext(Context);
 
     return (
@@ -122,13 +125,15 @@ function Header(){
                       className="PhoneConnectBtn-con"
                       onClick={openModalWalletClick}
                     >
-                      <button className="launchBtn">
+                      <button className="launchBtn" onClick={connectToMetaMask}>
                         {isConnected ? (
                           <>
                             <span id="accountBalance">
-                              {accountAddress.slice(0, 2) +
-                                "..." +
-                                accountAddress.slice(50)}
+                              <img
+                                src={metamask}
+                                alt={metamask}
+                                style={{ width: "20px", height: "20px" }}
+                              />
                             </span>
                           </>
                         ) : (
@@ -182,32 +187,12 @@ function Header(){
 
                     <div
                       className="launchBtn-con"
-                      onClick={openModalWalletClick}
+                      // onClick={openModalWalletClick}
                     >
-                      {/* <button
-                        className="launchBtn d-flex"
-                        style={{ width: "160px" }}
+                      <button
+                        className="launchBtn"
+                        onClick={hasProvider ? connectToMetaMask : ""}
                       >
-                        <div>
-                          <span id="accountBalance">
-                            {isConnected ? accountBalance + " ETH" : ""}
-                          </span>
-                          <span id="accountAddress" className='d-flex'>
-                            {isConnected ? (
-                              accountAddress.slice(0, 5) +
-                              "..." +
-                              accountAddress.slice(38)
-                            ) : (
-                              <>
-                                <ion-icon name="wallet-outline"></ion-icon>
-                                <div>Connect Wallet</div>
-                              </>
-                            )}
-                          </span>
-                        </div>
-                      </button> */}
-
-                      <button className="launchBtn">
                         {isConnected ? (
                           <>
                             <img

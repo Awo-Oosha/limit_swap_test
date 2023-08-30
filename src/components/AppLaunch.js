@@ -10,6 +10,7 @@ import { useRef, useState, useEffect, useContext } from "react";
 import tokenList from "../tokenList.json";
 import CustomModal from "./CustomModal";
 import { Context } from "../App";
+import axios from "axios";
 
 const App_Launch = () => {
   const { isToggled, isConnected } = useContext(Context);
@@ -43,35 +44,97 @@ const App_Launch = () => {
   const [tokenOneAmount, setTokenOneAmount] = useState(null);
   const [tokenTwoAmount, setTokenTwoAmount] = useState(null);
   const [changeToken, setChangeToken] = useState(1);
-
+  const [tokenOneUSDAmount, setTokenOneUSDAmount] = useState("0.00");
+  const [tokenTwoUSDAmount, setTokenTwoUSDAmount] = useState("0.00");
+  const [conversionRate, setConversionRate] = useState("0.0000");
   const [tokenOne, setTokenOne] = useState(tokenList[1]);
   const [tokenTwo, setTokenTwo] = useState(tokenList[2]);
 
   // *********************************************************************** //
   // ****************** Logic to Output Current Price ********************** //
   // *********************************************************************** //
+  const [prices, setPrices] = useState(null);
+  async function fetchPrices(one, two) {
+    const res = await axios.get("http://localhost:3001/tokenPrice", {
+      params: { addressOne: one, addressTwo: two },
+    });
+    console.log(res.data);
+    setPrices(res.data);
+    // Conversion Rate
+    setConversionRate(prices.ratio.toFixed(6));
+  }
 
-  const changeAmount = (e) => {
-    setTokenOneAmount(e.target.value);
-    if (e.target.value) {
-      setTokenTwoAmount(e.target.value);
-    } else {
-      setTokenOneAmount(0);
-      setTokenTwoAmount(e.target.placeholder = 0);
-    }
-  };
+  // Balance Logic
 
-  // Switch Function //
-  const switchToken = () => {
-    setTokenOne(null);
-    setTokenTwo(null);
+  // async function fetchBalances(one, two) {
+  //   try {
+  //     const response = await axios.get("http://localhost:3001/tokenBalances", {
+  //       params: { addressOne: one, addressTwo: two },
+  //     });
 
-    let one = tokenOne;
-    let two = tokenTwo;
+  //     SetToken_balance(response.data)
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // }
 
-    setTokenOne(two);
-    setTokenTwo(one);
-  };
+  useEffect(()=>{
+    fetchPrices(tokenList[0].address, tokenList[1].address)
+  },[])
+ const changeAmount = (e) => {
+   setTokenOneAmount(e.target.value);
+
+   if (e.target.value && prices) {
+     setTokenTwoAmount((e.target.value * prices.ratio).toFixed(3));
+
+     if (prices.tokenOne && prices.tokenTwo) {
+       // Calculate the USD amount of tokenOne based on its USD price
+       const usdAmountTokenOne = e.target.value * prices.tokenOne;
+       setTokenOneUSDAmount(usdAmountTokenOne.toFixed(2));
+
+       // Update tokenTwoUSDAmount using usdAmountTokenTwo
+       const usdAmountTokenTwo =
+         e.target.value * prices.ratio * prices.tokenTwo;
+       setTokenTwoUSDAmount(usdAmountTokenTwo.toFixed(2));
+
+     } else {
+       // Handle case when prices.tokenOne or prices.tokenTwo is not available
+       setTokenOneUSDAmount(0);
+       setTokenTwoUSDAmount(0);
+     }
+   } else {
+     setTokenTwoAmount("");
+     setTokenOneUSDAmount(0);
+     setTokenTwoUSDAmount(0);
+   }
+ };
+
+
+  function switchToken() {
+  setPrices(null);
+  setTokenOneAmount(null);
+  setTokenTwoAmount(null);
+
+  // Store current token values
+  const currentTokenOne = tokenOne;
+  const currentTokenTwo = tokenTwo;
+
+  // Swap token values
+  setTokenOne(currentTokenTwo);
+  setTokenTwo(currentTokenOne);
+
+  // Fetch prices based on the swapped tokens
+  fetchPrices(currentTokenTwo.address, currentTokenOne.address);
+}
+
+ const modifyToken = (i) => {
+   setPrices(null);
+   setTokenOneAmount(null);
+   setTokenTwoAmount(null);
+   changeToken === 1 ? setTokenOne(tokenList[i]) : setTokenTwo(tokenList[i]);
+   changeToken === 1 ? fetchPrices(tokenList[i].address, tokenTwo.address) : fetchPrices(tokenOne.address, tokenList[i].address)
+   setTokenListModalOpen(false);
+ };
 
   // Modal Two
   const modal = useRef(null);
@@ -139,10 +202,6 @@ const App_Launch = () => {
     setTokenListModalOpen(false);
   };
 
-  const modifyToken = (i) => {
-    changeToken === 1 ? setTokenOne(tokenList[i]) : setTokenTwo(tokenList[i]);
-    setTokenListModalOpen(false);
-  };
   // ########################### SWAPROUTE MODAL ####################
   const [isSwapRouteModalOpen, setIsSwapRouteModalOpen] = useState(false);
   const handleSwapRouteModalOpenClick = () => {
@@ -156,16 +215,23 @@ const App_Launch = () => {
   const Chart = useRef();
   const TradeBox = useRef();
   const HistoryBox = useRef();
+  const tokenHistoryRef = useRef();
+  const mainWindowRef = useRef();
 
   useEffect(() => {
     if (isToggled) {
       Chart.current.classList.add("active");
       TradeBox.current.classList.add("active");
       HistoryBox.current.classList.add("active");
+      tokenHistoryRef.current.style.display = 'flex';
+      mainWindowRef.current.style.height = '100%';
+
     } else {
       Chart.current.classList.remove("active");
       TradeBox.current.classList.remove("active");
       HistoryBox.current.classList.remove("active");
+      tokenHistoryRef.current.style.display = 'none';
+      mainWindowRef.current.style.height = '100vh';
     }
   }, [isToggled]);
 
@@ -355,9 +421,9 @@ const App_Launch = () => {
         </div>
       </CustomModal>
 
-      <div className="App_Launch mainWindow">
+      <div className="App_Launch mainWindow" ref={mainWindowRef}>
         <div className="container">
-          <div className="row">
+          <div className="row mainWindowRow">
             <div className="col-lg-8 Chart active" ref={Chart}>
               <div className="chartBox">
                 <div className="chart container card">
@@ -634,8 +700,9 @@ const App_Launch = () => {
                             placeholder="20.50"
                             value={tokenOneAmount}
                             onChange={changeAmount}
+                            disabled={!prices}
                           />{" "}
-                          <sub> ~574.90</sub>
+                          <sub> ~ ${tokenOneUSDAmount}</sub>
                           <div className="spilpageTolerance">
                             <button
                               className={slippageState === "20" ? "active" : ""}
@@ -708,13 +775,13 @@ const App_Launch = () => {
                             value={tokenTwoAmount}
                             disabled={true}
                           />{" "}
-                          <sub> ~38,217.00</sub>
+                          <sub> ~ ${tokenTwoUSDAmount}</sub>
                         </div>
                       </div>
 
                       <div className="TokenConverter">
                         <div className="tokenFrm"> 1 {tokenOne.ticker}</div>
-                        <div className="to"> = 1913.326535 </div>
+                        <div className="to"> = {conversionRate} </div>
                         <div className="tokenTo"> {tokenTwo.ticker} </div>
 
                         <svg
@@ -1078,7 +1145,7 @@ const App_Launch = () => {
             </div>
           </div>
 
-          <div className="row token-history">
+          <div className="row token-history" ref={tokenHistoryRef}>
             <div className="col-lg-12" ref={HistoryBox}>
               <div className="container">
                 <div className="chart_transactions active">
@@ -1101,7 +1168,7 @@ const App_Launch = () => {
                       Order History
                     </div>
 
-                    <div className="close-btn active">
+                    <div className="close-btn">
                       <ion-icon name="chevron-up"></ion-icon>
                     </div>
                   </div>

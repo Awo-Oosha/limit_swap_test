@@ -1,178 +1,3 @@
-.modalContent {
-  border: 1px solid #888;
-  width: 100%;
-  height: 40%;
-  padding: 1rem 2.5rem;
-  border-radius: 20px;
-  background: #1A1C1E;
-}
-.modalContent .connect-header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-.modalContent .connect-header-title {
-  color: #FFF;
-  font-family: Poppins sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-.modalContent .connect-header .connect-close {
-  cursor: pointer;
-}
-.modalContent .connect-header .connect-close ion-icon {
-  font-size: 2rem;
-  color: #fff;
-}
-.modalContent .terms {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  width: 100%;
-  border-radius: 8px;
-  background: #34363E;
-  padding: 0.5rem 0.1rem;
-}
-.modalContent .terms input[type=checkbox] {
-  accent-color: #BAFD02;
-  width: 18px;
-  height: 18px;
-}
-.modalContent .terms .read_understand {
-  margin-left: 0.2rem;
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-}
-.modalContent .terms .read_understand span {
-  color: #BAFD02;
-}
-.modalContent .terms.danger {
-  border: 2px solid red;
-}
-.modalContent .Networks-Heading {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  margin-top: 1rem;
-  margin-top: 1rem;
-}
-.modalContent .Networks-Heading-Number {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  border-radius: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
-}
-.modalContent .Networks-Heading-Title {
-  color: #FFF;
-  font-family: Poppins sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-}
-.modalContent .Networks .ChainNetworks {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 1rem;
-}
-.modalContent .Networks .ChainNetworks div {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  margin: 0.5rem 0.3rem;
-  cursor: pointer;
-}
-.modalContent .Networks .ChainNetworks div img {
-  height: 30px;
-  width: 30px;
-}
-.modalContent .Networks .ChainNetworks div div {
-  color: #FFF;
-  text-align: center;
-  font-family: Poppins sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px;
-}
-.modalContent .wallet-Heading {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  margin-top: 1rem;
-}
-.modalContent .wallet-Heading-number {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  border-radius: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
-}
-.modalContent .wallet-Heading-title {
-  color: #FFF;
-  font-family: Poppins sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-}
-.modalContent .wallet-container {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-.modalContent .wallet-container [class*=-con] {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  margin: 0.75rem 0.3rem;
-  cursor: pointer;
-}
-.modalContent .wallet-container [class*=-con] img {
-  width: 30px;
-  height: 30px;
-}
-.modalContent .wallet-container [class*=-con] div {
-  color: #FFF;
-  text-align: center;
-  font-family: Poppins sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px;
-}
-.modalContent .connectActionBtn {
-  width: 100%;
-  height: 50px;
-  border-radius: 8px;
-  background: #B6F509;
-  text-align: center;
-  color: #17234C;
-  font-family: Poppins sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  border: none;
-}
-.modalContent .connectActionBtn.disabled {
-  background: rgba(182, 245, 9, 0.5333333333);
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
 .tokenListModal {
   width: 100%;
   height: 365px;
@@ -439,6 +264,12 @@
   background-size: cover;
   height: 100%;
 }
+.mainWindow .mainWindowRow {
+  flex-direction: column-reverse;
+}
+.mainWindow .mainWindowRow .Chart {
+  margin-top: 1rem;
+}
 .mainWindow .Chart {
   transition: all 0.5s ease;
   height: 0;
@@ -592,13 +423,14 @@
 .mainWindow .TradeBox {
   transition: all 0.5s ease;
   z-index: 0;
+  height: 100%;
 }
 .mainWindow .TradeBox.active {
   transform: translateX(0);
 }
 .mainWindow .tradeBox-container {
   width: 100%;
-  height: 566px;
+  height: 100%;
   border-radius: 20px;
   background: linear-gradient(rgb(4, 5, 1), rgb(186, 253, 2), rgb(26, 33, 6), rgb(186, 253, 2));
   box-shadow: 0 10px 33px 1px rgba(0, 0, 0, 0.81);
@@ -2843,6 +2675,12 @@
     background: url(./assets/images/app_background.svg) no-repeat center;
     background-size: cover;
     height: 100%;
+  }
+  .mainWindow .mainWindowRow {
+    flex-direction: row;
+  }
+  .mainWindow .mainWindowRow .Chart {
+    margin-top: 0;
   }
   .mainWindow .Chart {
     transform: translateX(50%);

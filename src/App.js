@@ -4,29 +4,31 @@ import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
 import AppLaunch from "./components/AppLaunch";
 import {Route, Routes} from "react-router-dom";
-import { useState, createContext, useRef, useEffect } from 'react';
-import CustomModal from './components/CustomModal';
+import { useState, createContext, useEffect } from 'react';
+// import CustomModal from './components/CustomModal';
 import detectEthereumProvider from '@metamask/detect-provider';
 
 
 // IMAGES
-import arbitrum from './assets/images/app/Network_icons/Arbitrum.svg'
-import zkSync_Era from './assets/images/app/Network_icons/Zksync-Era.svg'
-import BNB_chain from './assets/images/app/Network_icons/BNB- chain.svg'
-import Polygon from './assets/images/app/Network_icons/Polygon.svg'
-import Avalanche from './assets/images/app/Network_icons/Avalanche.svg'
-import Fantom from './assets/images/app/Network_icons/Fantom.svg'
-import Aurora from './assets/images/app/Network_icons/Aurora.svg'
-import Klatyn from './assets/images/app/Network_icons/Klatyn.svg'
+// import arbitrum from './assets/images/app/Network_icons/Arbitrum.svg'
+// import zkSync_Era from './assets/images/app/Network_icons/Zksync-Era.svg'
+// import BNB_chain from './assets/images/app/Network_icons/BNB- chain.svg'
+// import Polygon from './assets/images/app/Network_icons/Polygon.svg'
+// import Avalanche from './assets/images/app/Network_icons/Avalanche.svg'
+// import Fantom from './assets/images/app/Network_icons/Fantom.svg'
+// import Aurora from './assets/images/app/Network_icons/Aurora.svg'
+// import Klatyn from './assets/images/app/Network_icons/Klatyn.svg'
 
 
-import inch from './assets/images/app/Wallets/uniswap.svg';
-import metamask from './assets/images/app/Wallets/metamask.svg'
-import trust from './assets/images/app/Wallets/trustwallet.svg'
-import walletconnect from './assets/images/app/Wallets/walletconnect.svg'
-import crypto from './assets/images/app/Wallets/brave.svg'
-import coinbase from './assets/images/app/Wallets/coinbase.svg'
-import eth_logo from './assets/images/app/Eth_icon.svg'
+// import inch from './assets/images/app/Wallets/uniswap.svg';
+// import trust from './assets/images/app/Wallets/trustwallet.svg'
+// import walletconnect from './assets/images/app/Wallets/walletconnect.svg'
+// import crypto from './assets/images/app/Wallets/brave.svg'
+// import coinbase from './assets/images/app/Wallets/coinbase.svg'
+// import eth_logo from './assets/images/app/Eth_icon.svg'
+
+import metamask from "./assets/images/app/Wallets/metamask.svg";
+
 
 
 
@@ -38,9 +40,9 @@ function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [hasProvider, setHasProvider] = useState(false);
 
-  const checkBoxRef = useRef(null);
-  const connectBtnRef = useRef(null);
-  const checkBoxContainerRef =useRef(null)
+  // const checkBoxRef = useRef(null);
+  // const connectBtnRef = useRef(null);
+  // const checkBoxContainerRef =useRef(null)
 
   useEffect(() => {
     const getProvider = async () => {
@@ -58,35 +60,62 @@ function App() {
   };
 
   const connectToMetaMask = async () => {
-    if(checkBoxRef.current.checked) {
-      try {
-        let accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        const balance = formatBalance(
-          await window.ethereum.request({
-            method: "eth_getBalance",
-            params: [accounts[0], "latest"],
-          })
-        );
-        setAccountAddress(accounts[0]);
-        setAccountBalance(balance);
-        setIsConnected(true);
-        setModalWalletConnect(false);
-        checkBoxContainerRef.current.classList.remove("danger");
-        console.log(accounts[0]);
-        console.log(balance);
-      } catch (err) {
-        if (err.code === 4001) {
-          console.log("Please connect to MetaMask.");
-        } else {
-          console.error(err);
-        }
+    try {
+      let accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      const balance = formatBalance(
+        await window.ethereum.request({
+          method: "eth_getBalance",
+          params: [accounts[0], "latest"],
+        })
+      );
+      setAccountAddress(accounts[0]);
+      setAccountBalance(balance);
+      setIsConnected(true);
+      setModalWalletConnect(false);
+      // checkBoxContainerRef.current.classList.remove("danger");
+      console.log(accounts[0]);
+      console.log(balance);
+    } catch (err) {
+      if (err.code === 4001) {
+        console.log("Please connect to MetaMask.");
+      } else {
+        console.error(err);
       }
-    } else {
-      checkBoxContainerRef.current.classList.add("danger");
     }
-  };  
+  }
+
+  // const connectToMetaMask = async () => {
+  //   if(checkBoxRef.current.checked) {
+  //     try {
+  //       let accounts = await window.ethereum.request({
+  //         method: "eth_requestAccounts",
+  //       });
+  //       const balance = formatBalance(
+  //         await window.ethereum.request({
+  //           method: "eth_getBalance",
+  //           params: [accounts[0], "latest"],
+  //         })
+  //       );
+  //       setAccountAddress(accounts[0]);
+  //       setAccountBalance(balance);
+  //       setIsConnected(true);
+  //       setModalWalletConnect(false);
+  //       checkBoxContainerRef.current.classList.remove("danger");
+  //       console.log(accounts[0]);
+  //       console.log(balance);
+  //     } catch (err) {
+  //       if (err.code === 4001) {
+  //         console.log("Please connect to MetaMask.");
+  //       } else {
+  //         console.error(err);
+  //       }
+  //     }
+  //   } else {
+  //     checkBoxContainerRef.current.classList.add("danger");
+  //   }
+  // };  
   
 
   const [isToggled, setIsToggled] = useState(false);
@@ -115,7 +144,8 @@ function App() {
         accountBalance,
         isConnected,
         connectToMetaMask,
-        metamask
+        metamask,
+        hasProvider
       }}
     >
       <>
@@ -123,7 +153,7 @@ function App() {
          ***********************************************
          ***********************************************
          */}
-        <CustomModal
+        {/* <CustomModal
           isOpen={modalWalletConnect}
           onClose={closeModalWalletClick}
         >
@@ -228,7 +258,7 @@ function App() {
               Connect to wallet
             </button>
           </div>
-        </CustomModal>
+        </CustomModal> */}
 
         <div className="App">
           <Header />

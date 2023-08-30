@@ -1,206 +1,208 @@
 
 // *******Connect Wallet Modal ********
 
-.modalContent {
-  border: 1px solid #888;
-  width: 100%;
-  height: 40%;
-  padding: 1rem 2.5rem;
-  border-radius: 20px;
-  background: #1A1C1E;
+// .modalContent {
+//   border: 1px solid #888;
+//   width: 100%;
+//   height: 40%;
+//   padding: 1rem 2.5rem;
+//   border-radius: 20px;
+//   background: #1A1C1E;
 
-  .connect-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
+//   .connect-header {
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-top: 0.5rem;
 
-    &-title {
-      color: #FFF;
-      font-family: Poppins sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      margin-bottom: .75rem;
-    }
-    .connect-close {
-      cursor: pointer;
-      ion-icon {
-        font-size: 2rem;
-        color: #fff;
-      }
-    }
-  }
+//     &-title {
+//       color: #FFF;
+//       font-family: Poppins sans-serif;
+//       font-size: 16px;
+//       font-style: normal;
+//       font-weight: 600;
+//       margin-bottom: .75rem;
+//     }
+//     .connect-close {
+//       cursor: pointer;
+//       ion-icon {
+//         font-size: 2rem;
+//         color: #fff;
+//       }
+//     }
+//   }
 
-  .terms {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    width: 100%;
-    border-radius: 8px;
-    background: #34363E;
-    padding:  0.5rem 0.1rem;
-    input[type=checkbox] {
-      accent-color: #BAFD02;
-      width: 18px;
-      height: 18px;
-    }
-    .read_understand {
-      margin-left: 0.2rem;
-      color: #FFF;
-      font-family: Poppins;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 25px;
+//   .terms {
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: center;
+//     width: 100%;
+//     border-radius: 8px;
+//     background: #34363E;
+//     padding:  0.5rem 0.1rem;
+//     input[type=checkbox] {
+//       accent-color: #BAFD02;
+//       width: 18px;
+//       height: 18px;
+//     }
+//     .read_understand {
+//       margin-left: 0.2rem;
+//       color: #FFF;
+//       font-family: Poppins;
+//       font-size: 10px;
+//       font-style: normal;
+//       font-weight: 400;
+//       line-height: 25px;
 
-      span {
-        color: #BAFD02;
-      }
-    }
+//       span {
+//         color: #BAFD02;
+//       }
+//     }
 
-    &.danger {
-      border: 2px solid red;
-    }
-  }
+//     &.danger {
+//       border: 2px solid red;
+//     }
+//   }
 
-  .Networks {
+//   .Networks {
 
-    &-Heading {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      margin-top: 1rem;
-      margin-top: 1rem;
+//     &-Heading {
+//       display: flex;
+//       flex-flow: row wrap;
+//       align-items: center;
+//       margin-top: 1rem;
+//       margin-top: 1rem;
 
-      &-Number {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #fff;
-        border-radius: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 1rem;
-      }
+//       &-Number {
+//         font-size: 1rem;
+//         font-weight: 600;
+//         color: #fff;
+//         border-radius: 80px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin-right: 1rem;
+//       }
 
-      &-Title {
-        color: #FFF;
-        font-family: Poppins sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-      }
-    }
+//       &-Title {
+//         color: #FFF;
+//         font-family: Poppins sans-serif;
+//         font-size: 16px;
+//         font-style: normal;
+//         font-weight: 600;
+//       }
+//     }
 
-    .ChainNetworks {
-      display: flex;
-      flex-flow: row wrap;
-      margin-bottom: 1rem;
-      div {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        margin: .5rem 0.3rem;
-        cursor: pointer;
+//     .ChainNetworks {
+//       display: flex;
+//       flex-flow: row wrap;
+//       margin-bottom: 1rem;
+//       div {
+//         display: flex;
+//         flex-flow: column wrap;
+//         align-items: center;
+//         margin: .5rem 0.3rem;
+//         cursor: pointer;
 
-        img {
-          height: 30px;
-          width: 30px;
-        }
+//         img {
+//           height: 30px;
+//           width: 30px;
+//         }
 
-        div {
-          color: #FFF;
-          text-align: center;
-          font-family: Poppins sans-serif;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 25px;
-        }
+//         div {
+//           color: #FFF;
+//           text-align: center;
+//           font-family: Poppins sans-serif;
+//           font-size: 12px;
+//           font-style: normal;
+//           font-weight: 300;
+//           line-height: 25px;
+//         }
 
-      }
-    }
+//       }
+//     }
 
-  }
+//   }
 
-  .wallet-Heading {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin-top: 1rem;
+//   .wallet-Heading {
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: center;
+//     margin-top: 1rem;
 
-    &-number {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      border-radius: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 1rem;
-    }
+//     &-number {
+//       font-size: 1rem;
+//       font-weight: 600;
+//       color: #fff;
+//       border-radius: 80px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       margin-right: 1rem;
+//     }
 
-    &-title {
-      color: #FFF;
-      font-family: Poppins sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-    }
-  }
+//     &-title {
+//       color: #FFF;
+//       font-family: Poppins sans-serif;
+//       font-size: 16px;
+//       font-style: normal;
+//       font-weight: 600;
+//     }
+//   }
 
-  .wallet-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+//   .wallet-container {
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: center;
 
-    [class*='-con'] {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      margin: .75rem 0.3rem;
-      cursor: pointer;
+//     [class*='-con'] {
+//       display: flex;
+//       flex-flow: column wrap;
+//       align-items: center;
+//       margin: .75rem 0.3rem;
+//       cursor: pointer;
 
-      img{
-        width: 30px;
-        height: 30px;
-      }
+//       img{
+//         width: 30px;
+//         height: 30px;
+//       }
 
-      div {
-        color: #FFF;
-        text-align: center;
-        font-family: Poppins sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 25px;
-      }
-    }
+//       div {
+//         color: #FFF;
+//         text-align: center;
+//         font-family: Poppins sans-serif;
+//         font-size: 12px;
+//         font-style: normal;
+//         font-weight: 300;
+//         line-height: 25px;
+//       }
+//     }
 
-  }
+//   }
 
-  .connectActionBtn {
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    background: #B6F509;
-    text-align: center;
-    color: #17234C;
-    font-family: Poppins sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border: none;
+//   .connectActionBtn {
+//     width: 100%;
+//     height: 50px;
+//     border-radius: 8px;
+//     background: #B6F509;
+//     text-align: center;
+//     color: #17234C;
+//     font-family: Poppins sans-serif;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: normal;
+//     border: none;
 
-    &.disabled {
-      background: #b6f50988;
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-  }
-}
+//     &.disabled {
+//       background: #b6f50988;
+//       opacity: 0.4;
+//       cursor: not-allowed;
+//     }
+//   }
+// }
+
+
 //  ############### TokenList Modal ############ //
 .tokenListModal {
   width: 100%;
@@ -520,6 +522,12 @@
   background-size: cover;
   height: 100%;
 
+  .mainWindowRow {
+    flex-direction: column-reverse;
+    .Chart {
+      margin-top: 1rem;
+    }
+  }
 
   .Chart {
       transition: all 0.5s ease;
@@ -706,13 +714,14 @@
   .TradeBox {
     transition: all 0.5s ease;
     z-index: 0;
+    height: 100%;
     &.active {
       transform: translateX(0);
     }
   }
   .tradeBox-container {
     width: 100%;
-    height: 566px;
+    height: 100%;
     border-radius: 20px;
     background: linear-gradient(rgba(4, 5, 1, 1), rgba(186, 253, 2, 1), rgba(26, 33, 6, 1), rgba(186, 253, 2, 1));
     box-shadow: 0 10px 33px 1px rgba(0, 0, 0, 0.81);
@@ -3314,8 +3323,16 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         background: url(./assets/images/app_background.svg) no-repeat center;
-        background-size: cover;
+        background-size:cover;
         height: 100%;
+
+        .mainWindowRow {
+            flex-direction: row;
+        
+            .Chart {
+              margin-top: 0;
+            }
+          }
     
         .Chart {
           transform: translateX(50%);

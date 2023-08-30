@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2291d3fd.css",
-    "main.js": "/static/js/main.146a89b0.js",
+    "main.css": "/static/css/main.a3de48d8.css",
+    "main.js": "/static/js/main.dc8c5b28.js",
     "static/js/787.609bcf66.chunk.js": "/static/js/787.609bcf66.chunk.js",
     "static/media/app_background.svg": "/static/media/app_background.4ed81e7858517e56f2ea.svg",
     "static/media/main-sectionBG.svg": "/static/media/main-sectionBG.1f7813e9c6553c12bd62.svg",
@@ -12,39 +12,26 @@
     "static/media/about_image.svg": "/static/media/about_image.f5b1e21eea88a7e7455021b4bd6a727f.svg",
     "static/media/small-about.svg": "/static/media/small-about.d0408e1f7d59b910ab748222e92af458.svg",
     "static/media/Eth_icon.svg": "/static/media/Eth_icon.1b92fd2b27e3336cf0134b1236ab27a1.svg",
-    "static/media/uniswap.svg": "/static/media/uniswap.d30227e0bcafc284ca6e0e8b255faa2c.svg",
     "static/media/card_plug_icon.svg": "/static/media/card_plug_icon.80fc46c417fb7b41e8a9555a49cf42f0.svg",
     "static/media/dai_icon.svg": "/static/media/dai_icon.db7e6b83ecd962e7fd0e.svg",
     "static/media/services_safe_icon.svg": "/static/media/services_safe_icon.ecb04ab7482dc33e02111c9a9f9bbd97.svg",
     "static/media/metamask.svg": "/static/media/metamask.7f02f5b1c4e749be082713541aad65e4.svg",
     "static/media/services_mining_icon.svg": "/static/media/services_mining_icon.6371ea32ada15a3e8d26f33624ee105c.svg",
     "static/media/services_btcwallet_icon.svg": "/static/media/services_btcwallet_icon.b3915c3bc4d1acdfb59ae1051386f3b3.svg",
-    "static/media/Fantom.svg": "/static/media/Fantom.e062a6852d834de19ed3e5fe40abbcb9.svg",
     "static/media/card_filter_icon.svg": "/static/media/card_filter_icon.97ce6a74ce978f1020067be7e59509dd.svg",
     "static/media/toggle_on.svg": "/static/media/toggle_on.420f5a6e3816a0cae8e5.svg",
     "static/media/toggle_off.svg": "/static/media/toggle_off.68be0e30a00e25ca4476.svg",
-    "static/media/trustwallet.svg": "/static/media/trustwallet.2b6cb5820e2af34d5346d9e5741df9d4.svg",
     "static/media/card_reload_icon.svg": "/static/media/card_reload_icon.de84d56aa6604203cbd6106bf0945369.svg",
-    "static/media/Arbitrum.svg": "/static/media/Arbitrum.e4da35c05b1a0162e07307c2b5abf805.svg",
-    "static/media/brave.svg": "/static/media/brave.0b30a50833d46d2e392c540d5dbe7137.svg",
-    "static/media/Klatyn.svg": "/static/media/Klatyn.ca13daaf29689d99ed3c9bdb60d28306.svg",
-    "static/media/Polygon.svg": "/static/media/Polygon.0d3e8a49adabd4a932131a700bccc6db.svg",
-    "static/media/Avalanche.svg": "/static/media/Avalanche.f8da284b173d52ab863c0afb0f7fa3b4.svg",
-    "static/media/walletconnect.svg": "/static/media/walletconnect.d8820ecf59de95901a44167df04df0e0.svg",
-    "static/media/coinbase.svg": "/static/media/coinbase.4008391adc1afc85d244e3ecbe0d06ff.svg",
-    "static/media/BNB- chain.svg": "/static/media/BNB- chain.14bf5dfa276993b3a41f5dd74bba4cff.svg",
     "index.html": "/index.html",
-    "static/media/Aurora.svg": "/static/media/Aurora.4e4db587643a5b49a2302bacc1cc6079.svg",
     "static/media/services-bg_path.svg": "/static/media/services-bg_path.824f8b2596d649c1aa16.svg",
-    "static/media/Zksync-Era.svg": "/static/media/Zksync-Era.141531133f6bdc5c832d8db166d1e39e.svg",
     "static/media/card_add_icon.svg": "/static/media/card_add_icon.4c56548317eb1650d777ee5bee4b97bd.svg",
     "static/media/straight_arrow.svg": "/static/media/straight_arrow.a19e6304f8f057bef96c.svg",
-    "main.2291d3fd.css.map": "/static/css/main.2291d3fd.css.map",
-    "main.146a89b0.js.map": "/static/js/main.146a89b0.js.map",
+    "main.a3de48d8.css.map": "/static/css/main.a3de48d8.css.map",
+    "main.dc8c5b28.js.map": "/static/js/main.dc8c5b28.js.map",
     "787.609bcf66.chunk.js.map": "/static/js/787.609bcf66.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2291d3fd.css",
-    "static/js/main.146a89b0.js"
+    "static/css/main.a3de48d8.css",
+    "static/js/main.dc8c5b28.js"
   ]
 }
